@@ -1,0 +1,24 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #000;
+  background: #dedbc7;
+}
+
+/* Text Styles */
+p {
+  font-size: 1em;
+}
+
+/* Link Styles */
+a, a:link {
+  color: #488c40;
+}
+
+a:visited {
+  color: #22592a;
+}
