@@ -6,12 +6,7 @@ body {
   line-height: 1.5;
   font-size: 100%;
   color: #000;
-  background-color: #dedbc7;
-  background-image: url("img/headband.jpg");
-}
-
-main {
-  /*background: url("img/headband.jpg") no-repeat fixed center;*/
+  background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
 }
 
 footer {
@@ -21,14 +16,15 @@ footer {
 /* Text Styles */
 p {
   font-size: 1em;
+  margin: .4em .8em;
 }
 
 /* Link Styles */
 a, a:link {
-  color: #488c40;
+  color: #8e0602;
   text-decoration: none;
 }
 
 a:visited {
-  color: #22592a;
+  color: #630300;
 }

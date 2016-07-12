@@ -7,5 +7,17 @@ footer p {
 }
 
 @media only screen and (min-width: 640px) {
-  /* style for large screen here */
+  /*body {
+    background: #272c28;
+  }
+
+  header {
+    background-image: url("../img/pages_header.jpg") no-repeat fixed center top;
+  }
+
+  .nav {
+    width: 100%;
+  }*/
+
+
 }
