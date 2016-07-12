@@ -1,0 +1,33 @@
+.nav {
+  padding: 0.1em;
+}
+
+.nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.nav:hover ul {
+  display: block;
+}
+
+.nav li {
+  margin-right: .4em;
+  font-size: 1.5em;
+  padding: .3em .2em;
+  text-align: right;
+  border-top: 1px solid #22592a;
+}
+
+.hamburger {
+  float: right;
+  margin: .15em .15em 0 0;
+}
+
+.header_h1 {
+  font-size: 2em;
+  float: left;
+  padding: 0 0 .15em .15em;
+}

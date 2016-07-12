@@ -1,11 +1,11 @@
+.clearfix {
+  clear: both;
+}
+
+footer p {
+  text-align: center;
+}
+
 @media only screen and (min-width: 640px) {
   /* style for large screen here */
-}
-
-.nav {
-  display: none;
-}
-
-.nav:hover {
-  display: block;
 }
