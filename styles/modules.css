@@ -91,17 +91,20 @@
 /* About Page */
 
 .about p {
-  height: 80%;
+  height: 50%;
   overflow: auto;
-  margin-top: 0.25em;
+  margin-bottom: 4em;
   outline: 1px dashed blue;
 }
 
 .about img {
   border-radius: 50%;
   display: block;
+  max-height: 45%;
+  max-width: 45%;
+  margin: 0 auto 1em;
 }
 
 @media only screen and (min-width: 640px) {
-  
+
 }
