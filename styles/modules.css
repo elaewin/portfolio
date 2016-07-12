@@ -27,9 +27,10 @@
   border-top: 1px solid #272c28;
 }
 
-.hamburger {
+.icon-menu {
+  font-size: 2em;
   float: right;
-  margin: .15em .15em 0 0;
+  margin: .15em;
 }
 
 .github-icon {
@@ -53,7 +54,7 @@
     padding: 0 0 .2em .2em;
   }
 
-  .hamburger {
+  .icon-menu {
     display: none;
   }
 
