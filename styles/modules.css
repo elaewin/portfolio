@@ -27,6 +27,16 @@
   border-top: 1px solid #272c28;
 }
 
+.media_icons {
+  list-style: none;
+}
+
+.media_icons li {
+  border: none;
+  display: inline;
+  font-size: 1em;
+}
+
 .icon-menu {
   font-size: 2em;
   float: right;
@@ -44,7 +54,7 @@
   }
 
   header, main, footer {
-    max-width: 845px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -76,4 +86,22 @@
     border-top: none;
     margin-left: 1em;
   }
+}
+
+/* About Page */
+
+.about p {
+  height: 80%;
+  overflow: auto;
+  margin-top: 0.25em;
+  outline: 1px dashed blue;
+}
+
+.about img {
+  border-radius: 50%;
+  display: block;
+}
+
+@media only screen and (min-width: 640px) {
+  
 }
