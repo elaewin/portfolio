@@ -10,6 +10,10 @@ body {
   background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
 }
 
+main {
+  padding-top: 3em;
+}
+
 /* Text Styles */
 h1 {
   font-size: 2em;
@@ -21,7 +25,7 @@ h2 {
 
 p, article {
   font-size: 1em;
-  margin: .4em .8em;
+  padding: .4em .8em;
 }
 
 article {
@@ -36,4 +40,12 @@ a, a:link {
 
 a:visited {
   color: #630300;
+}
+
+#page_footer {
+  color: #f5f2e1;
+}
+
+#page_footer a:link, #page_footer a:visited {
+  color: #f5f2e1;
 }

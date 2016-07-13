@@ -11,29 +11,27 @@
     <link type="text/css" rel="stylesheet" href="styles/icons.css">
   </head>
   <body>
-    <header>
+    <header id="page_header">
+      <h1 class="header_h1">Erica L. Winberry</h1>
       <div class="nav">
-        <h1 class="header_h1">Erica L. Winberry</h1>
         <div class="icon-menu"></div>
         <ul>
           <li class="menu modern"><a href="#">Modern Technology</a></li>
           <li class="menu ancient"><a href="https://ericawinberry.wordpress.com/portfolio/" target="_blank">Ancient Technology</a></li>
-          <li class="menu about"><a href="about.html">About Erica</a></li>
-          <li class="menu social">
-            <ul class="media_icons">
-              <li><a href="https://github.com/elaewin" target="_blank" class="icon-github"></a></li>
-              <li><a href="#" target="_blank" class="icon-twitter"></a></li>
-              <li><a href="#" target="_blank" class="icon-facebook2"></a></li>
-            </ul>
-          </li>
+          <li class="menu about"><a href="about.html">About</a></li>
         </ul>
       </div>
     </header>
     <div class="clearfix"></div>
     <main>
+      <section id="intro">
+        <img src="img/profile_pic.jpg">
+        <h2>Ancient vs. Modern</h2>
+        <p>My life is an odd dichotomy between the very old and the modern. When I'm not creating one of mankind's oldest pieces of technology, I work as a web developer, focusing on something interesting that I should put in here soon. Also, there is almost no kind of pie that I do not like.</p>
+      </section>
       <section id="posts">
         <article class="template" category="stuff">
-          <header>
+          <header class="post">
             <h2>Title</h2>
             <ul class="post_links">
               <li class="link"><a class="icon-link" target="_blank"></a></li>
@@ -47,8 +45,12 @@
         </article>
       </section>
     </main>
-    <footer class="page_footer">
-      <p>&copy; 2016</p>
+    <footer id="page_footer">
+        <ul class="media_icons">
+          <li><a href="https://github.com/elaewin" target="_blank" class="icon-github"></a></li>
+          <li><a href="#" target="_blank" class="icon-twitter"></a></li>
+          <li><a href="#" target="_blank" class="icon-facebook2"></a></li>
+        </ul>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="js/data.js"></script>
