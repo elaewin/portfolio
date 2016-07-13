@@ -1,0 +1,13 @@
+/* About Page */
+
+.about p {
+  height: 80%;
+  overflow: auto;
+  margin-top: 0.25em;
+  outline: 1px dashed blue;
+}
+
+.about img {
+  border-radius: 50%;
+  display: block;
+}

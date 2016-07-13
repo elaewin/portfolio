@@ -2,22 +2,33 @@
   clear: both;
 }
 
-footer p {
+.post_footer {
+  font-style: italic;
+}
+
+.post_links li {
+  display: inline;
+  padding: 0 .2em;
+}
+
+.content_body li {
+  font-size: 1em;
+  margin: .4em .8em;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.page_footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.page_footer p {
+  color: #f5f2e1;
   text-align: center;
 }
 
 @media only screen and (min-width: 640px) {
-  /*body {
-    background: #272c28;
-  }
-
-  header {
-    background-image: url("../img/pages_header.jpg") no-repeat fixed center top;
-  }
-
-  .nav {
-    width: 100%;
-  }*/
-
 
 }

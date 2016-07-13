@@ -5,18 +5,27 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
+  font-family: "Sorts Mill Goudy", serif;
   color: #000;
   background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
 }
 
-footer {
-  text-align: center;
+/* Text Styles */
+h1 {
+  font-size: 2em;
 }
 
-/* Text Styles */
-p {
+h2 {
+  font-size: 1.5em;
+}
+
+p, article {
   font-size: 1em;
   margin: .4em .8em;
+}
+
+article {
+  margin-bottom: 1em;
 }
 
 /* Link Styles */

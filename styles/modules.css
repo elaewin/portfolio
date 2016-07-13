@@ -27,14 +27,33 @@
   border-top: 1px solid #272c28;
 }
 
-.hamburger {
+.media_icons {
+  list-style: none;
+}
+
+.media_icons li {
+  border: none;
+  display: inline;
+  font-size: 1em;
+}
+
+.icon-menu {
+  font-size: 2em;
   float: right;
-  margin: .15em .15em 0 0;
+  margin: .15em;
 }
 
 .github-icon {
   height: 24px;
   width: 24px;
+}
+
+.template {
+  display: none;
+}
+
+a:link .grey {
+  color: #8c8880;
 }
 
 @media only screen and (min-width: 640px) {
@@ -43,7 +62,7 @@
   }
 
   header, main, footer {
-    max-width: 845px;
+    max-width: 1000px;
     margin: 0 auto;
   }
 
@@ -53,7 +72,7 @@
     padding: 0 0 .2em .2em;
   }
 
-  .hamburger {
+  .icon-menu {
     display: none;
   }
 
@@ -75,4 +94,25 @@
     border-top: none;
     margin-left: 1em;
   }
+}
+
+/* About Page */
+
+.about p {
+  height: 50%;
+  overflow: auto;
+  margin-bottom: 4em;
+  outline: 1px dashed blue;
+}
+
+.about img {
+  border-radius: 50%;
+  display: block;
+  max-height: 45%;
+  max-width: 45%;
+  margin: 0 auto 1em;
+}
+
+@media only screen and (min-width: 640px) {
+
 }
