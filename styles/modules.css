@@ -52,7 +52,7 @@
   display: none;
 }
 
-.grey {
+a:link .grey {
   color: #8c8880;
 }
 

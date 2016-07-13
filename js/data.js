@@ -21,6 +21,7 @@ var postData = [
     title: 'Learning Journal',
     category: 'blog',
     pubDate: '2016-07-09',
+    website: '',
     githubRepo: 'https://github.com/elaewin/learning_journal',
     postContent: 'One of my assignments for CF 201 was a daily learning journal, used to reflect on what I\'d learned on any given day. I tried to put in at least one small bit of code each day, as well as bullet point &#8220;things to remember&#8221;.'
   },

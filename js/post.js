@@ -6,8 +6,8 @@ function Post(source) {
   this.title = source.title;
   this.category = source.category;
   this.pubDate = source.pubDate;
-  this.website = source.website || 'none';
-  this.githubRepo = source.githubRepo || 'none';
+  this.website = source.website;
+  this.githubRepo = source.githubRepo;
   this.postContent = source.postContent;
 }
 
@@ -15,12 +15,12 @@ Post.prototype.toHtml = function() {
   var $newPost = $('article.template').clone();
   $newPost.find('h2').text(this.title);
   $newPost.attr('category', this.category);
-  if(this.website !== 'none') {
+  if(this.website !== '') {
     $newPost.find('.link a').attr('href', this.website);
   } else {
     $newPost.find('.link').addClass('grey');
   };
-  if(this.githubRepo !== 'none') {
+  if(this.githubRepo !== '') {
     $newPost.find('.repo a').attr('href', this.githubRepo);
   } else {
     $newPost.find('.repo').addClass('grey');
