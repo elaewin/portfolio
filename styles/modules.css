@@ -1,0 +1,78 @@
+.header_h1 {
+  font-size: 2em;
+  float: left;
+  padding: 0 0 .15em .15em;
+}
+
+.nav {
+  padding: 0.1em;
+}
+
+.nav ul {
+  display: none;
+  padding: 0;
+  list-style: none;
+  clear: both;
+}
+
+.nav:hover ul {
+  display: block;
+}
+
+.nav li {
+  margin: 0 .4em;
+  font-size: 1.5em;
+  padding: .3em .2em;
+  text-align: right;
+  border-top: 1px solid #272c28;
+}
+
+.hamburger {
+  float: right;
+  margin: .15em .15em 0 0;
+}
+
+.github-icon {
+  height: 24px;
+  width: 24px;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    background: #272c28 url("../img/headband.jpg") no-repeat fixed center top;
+  }
+
+  header, main, footer {
+    max-width: 845px;
+    margin: 0 auto;
+  }
+
+  .header_h1 {
+    font-size: 2em;
+    float: left;
+    padding: 0 0 .2em .2em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav {
+    padding: .5em;
+    width: 0 auto;
+  }
+
+  .nav ul {
+    float: right;
+    display: block;
+    padding: 0;
+    list-style: none;
+    clear: both;
+  }
+
+  .nav li {
+    display: inline;
+    border-top: none;
+    margin-left: 1em;
+  }
+}

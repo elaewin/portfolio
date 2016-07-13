@@ -1,0 +1,23 @@
+.clearfix {
+  clear: both;
+}
+
+footer p {
+  text-align: center;
+}
+
+@media only screen and (min-width: 640px) {
+  /*body {
+    background: #272c28;
+  }
+
+  header {
+    background-image: url("../img/pages_header.jpg") no-repeat fixed center top;
+  }
+
+  .nav {
+    width: 100%;
+  }*/
+
+
+}

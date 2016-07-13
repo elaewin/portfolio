@@ -1,0 +1,30 @@
+img {
+  max-width: 100%;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  color: #000;
+  background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
+}
+
+footer {
+  text-align: center;
+}
+
+/* Text Styles */
+p {
+  font-size: 1em;
+  margin: .4em .8em;
+}
+
+/* Link Styles */
+a, a:link {
+  color: #8e0602;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #630300;
+}
