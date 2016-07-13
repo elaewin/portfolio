@@ -72,6 +72,23 @@ a:link .grey {
   color: #8c8880;
 }
 
+#ancient div, #modern div {
+  position: relative;
+}
+
+#ancient p {
+  position: absolute;
+  font-size: 2em;
+  top: .5em;
+}
+
+#modern p {
+  position: absolute;
+  font-size: 2em;
+  top: .5em;
+  color: #fff;
+}
+
 @media only screen and (min-width: 640px) {
   body {
     background: #272c28 url("../img/headband.jpg") no-repeat fixed center top;
