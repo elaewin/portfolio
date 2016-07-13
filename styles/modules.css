@@ -48,6 +48,14 @@
   width: 24px;
 }
 
+.template {
+  display: none;
+}
+
+.grey {
+  color: #8c8880;
+}
+
 @media only screen and (min-width: 640px) {
   body {
     background: #272c28 url("../img/headband.jpg") no-repeat fixed center top;

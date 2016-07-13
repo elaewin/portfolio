@@ -31,18 +31,18 @@
     </header>
     <div class="clearfix"></div>
     <main>
-      <section id="articles">
-        <article class="template">
+      <section id="posts">
+        <article class="template" category="stuff">
           <header>
             <h2>Title</h2>
-            <ul>
-              <li class="link"><a href="" class="icon-link" target="_blank"></a></li>
-              <li class="repo"><a href="" class="icon-github" target="_blank"></a></li>
+            <ul class="post_links">
+              <li class="link"><a class="icon-link" target="_blank"></a></li>
+              <li class="repo"><a class="icon-github" target="_blank"></a></li>
             </ul>
           </header>
           <section class="content_body">Content goes here.</section>
-          <footer class="article_footer">
-            published <time pubdate datetime="2000-01-01">Publish Time</time></p>
+          <footer class="post_footer">
+          <p>Published <time pubdate datetime="2000-01-01">Publish Time</time></p>
           </footer>
         </article>
       </section>
@@ -50,6 +50,8 @@
     <footer class="page_footer">
       <p>&copy; 2016</p>
     </footer>
-    <script src="js/app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="js/data.js"></script>
+    <script src="js/post.js"></script>
   </body>
 </html>

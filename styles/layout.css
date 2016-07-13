@@ -2,17 +2,20 @@
   clear: both;
 }
 
-.article_footer {
+.post_footer {
   font-style: italic;
 }
 
-article ul {
-  float: right;
-}
-
-article li {
+.post_links li {
   display: inline;
   padding: 0 .2em;
+}
+
+.content_body li {
+  font-size: 1em;
+  margin: .4em .8em;
+  list-style-type: disc;
+  list-style-position: inside;
 }
 
 .page_footer {

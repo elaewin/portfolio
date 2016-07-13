@@ -24,6 +24,10 @@ p, article {
   margin: .4em .8em;
 }
 
+article {
+  margin-bottom: 1em;
+}
+
 /* Link Styles */
 a, a:link {
   color: #8e0602;
