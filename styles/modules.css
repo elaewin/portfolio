@@ -5,14 +5,21 @@
 }
 
 .nav {
-  padding: 0.1em;
+  position: absolute;
+  right: .15em;
+  width: 100%;
 }
 
 .nav ul {
   display: none;
-  padding: 0;
+  padding: 0 .2em;
   list-style: none;
   clear: both;
+  position: absolute;
+  right: 0;
+  top: 3em;
+  z-index: 10;
+  width: 100%;
 }
 
 .nav:hover ul {
@@ -20,27 +27,36 @@
 }
 
 .nav li {
-  margin: 0 .4em;
   font-size: 1.5em;
   padding: .3em .2em;
   text-align: right;
   border-top: 1px solid #272c28;
+  background-color: rgba(245, 242, 225, 0.9);
+  width: 100%;
+}
+
+.nav li a {
+  padding-right: .4em;
 }
 
 .media_icons {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-left: 13%;
 }
 
 .media_icons li {
+  flex-grow: .2;
   border: none;
-  display: inline;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .icon-menu {
   font-size: 2em;
-  float: right;
   margin: .15em;
+  position: absolute;
+  right: 0;
 }
 
 .github-icon {
@@ -98,19 +114,22 @@ a:link .grey {
 
 /* About Page */
 
-.about p {
-  height: 50%;
-  overflow: auto;
-  margin-bottom: 4em;
-  outline: 1px dashed blue;
-}
-
-.about img {
+#intro img {
   border-radius: 50%;
   display: block;
   max-height: 45%;
   max-width: 45%;
-  margin: 0 auto 1em;
+  margin: 7% auto 1em;
+}
+
+#intro h2 {
+  text-align: center;
+}
+
+#intro p {
+  padding-bottom: 2em;
+  font-size: 1.1em;
+  background: rgba(245, 242, 225, .7);
 }
 
 @media only screen and (min-width: 640px) {
