@@ -2,13 +2,26 @@
   clear: both;
 }
 
-footer {
+.article_footer {
+  font-style: italic;
+}
+
+article ul {
+  float: right;
+}
+
+article li {
+  display: inline;
+  padding: 0 .2em;
+}
+
+.page_footer {
   position: fixed;
   bottom: 0;
   width: 100%;
 }
 
-footer p {
+.page_footer p {
   color: #f5f2e1;
   text-align: center;
 }

@@ -10,15 +10,16 @@ body {
   background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 4em;
+/* Text Styles */
+h1 {
+  font-size: 2em;
 }
 
-/* Text Styles */
-p {
+h2 {
+  font-size: 1.5em;
+}
+
+p, article {
   font-size: 1em;
   margin: .4em .8em;
 }
