@@ -1,6 +1,6 @@
 'use strict';
 
-var postsArray = []
+var postsArray = [];
 
 function Post(source) {
   this.title = source.title;
@@ -25,7 +25,7 @@ Post.prototype.toHtml = function() {
   } else {
     $newPost.find('.repo').addClass('grey');
   };
-  $newPost.find('.content_body').html(this.postContent);
+  $newPost.find('.post_body').html(this.postContent);
 
   // Based on the example from the lab on 7/12.
   $newPost.find('time[pubdate]').attr('title', this.pubDate);

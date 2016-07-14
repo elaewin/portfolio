@@ -1,16 +1,18 @@
+/* Main Nav */
+
 .header_h1 {
   font-size: 2em;
   float: left;
   padding: 0 0 .15em .15em;
 }
 
-.nav {
+.main-nav {
   position: absolute;
   right: .15em;
   width: 100%;
 }
 
-.nav ul {
+.main-nav ul {
   display: none;
   padding: 0 .2em;
   list-style: none;
@@ -22,11 +24,11 @@
   width: 100%;
 }
 
-.nav:hover ul {
+.main-nav:hover ul {
   display: block;
 }
 
-.nav li {
+.main-nav li {
   font-size: 1.5em;
   padding: .3em .2em;
   text-align: right;
@@ -35,7 +37,7 @@
   width: 100%;
 }
 
-.nav li a {
+.main-nav li a {
   padding-right: .4em;
 }
 
@@ -64,29 +66,48 @@
   width: 24px;
 }
 
-.template {
-  display: none;
-}
-
 a:link .grey {
   color: #8c8880;
 }
 
-#ancient div, #modern div {
+/* Home Section */
+
+#home div {
   position: relative;
+  float: left;
 }
 
-#ancient p {
+#home p {
   position: absolute;
   font-size: 2em;
   top: .5em;
 }
 
-#modern p {
-  position: absolute;
-  font-size: 2em;
-  top: .5em;
+.white {
   color: #fff;
+}
+
+#home img  {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  vertical-align: middle;
+}
+/* Posts Section */
+
+.template {
+  display: none;
+}
+
+#posts select {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1em;
+  margin: .4em 0;
+  outline: 1px red dashed;
+}
+
+#posts div li {
+  width: 100%;
 }
 
 @media only screen and (min-width: 640px) {
@@ -109,12 +130,12 @@ a:link .grey {
     display: none;
   }
 
-  .nav {
+  .main-nav {
     padding: .5em;
     width: 0 auto;
   }
 
-  .nav ul {
+  .main-nav ul {
     float: right;
     display: block;
     padding: 0;
@@ -122,16 +143,16 @@ a:link .grey {
     clear: both;
   }
 
-  .nav li {
+  .main-nav li {
     display: inline;
     border-top: none;
     margin-left: 1em;
   }
 }
 
-/* About Page */
+/* About Section */
 
-#intro img {
+#about img {
   border-radius: 50%;
   display: block;
   max-height: 45%;
@@ -139,11 +160,11 @@ a:link .grey {
   margin: 7% auto 1em;
 }
 
-#intro h2 {
+#about h2 {
   text-align: center;
 }
 
-#intro p {
+#about p {
   padding-bottom: 2em;
   font-size: 1.1em;
   background: rgba(245, 242, 225, .7);
