@@ -42,6 +42,29 @@ postView.handleCategoryFilter = function() {
   });
 };
 
+postView.setTeasers = function() {
+  $('article').each(function() {
+    $('.post_body *:nth-of-type(n+2)').hide();
+    $(this).removeClass('show');
+  });
+
+  $('article a.read_on').on('click', function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    var $selection = $(event.target).prev();
+    if($selection.hasClass('show')) {
+      $(event.target).html('Show more &#8594;');
+      $('.show *:nth-of-type(n+2)').toggle();
+      $($selection).removeClass('show');
+    } else {
+      $(event.target).html('&#8592; Show less');
+      $selection.addClass('show');
+    }
+    $('.show *:nth-of-type(n+2)').toggle();
+  });
+};
+
+postView.setTeasers();
 postView.populateFilters();
 postView.handleCategoryFilter();
 postView.handleMainNav();
