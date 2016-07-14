@@ -43,6 +43,11 @@ select {
   font-size: 1em;
 }
 
+#ancient {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+}
 
 @media only screen and (min-width: 640px) {
 

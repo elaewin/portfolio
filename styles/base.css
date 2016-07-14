@@ -7,7 +7,7 @@ body {
   font-size: 100%;
   font-family: "Sorts Mill Goudy", serif;
   color: #000;
-  background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;
+  /*background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;*/
 }
 
 main {
