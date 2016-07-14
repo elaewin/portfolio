@@ -1,6 +1,6 @@
 'use strict';
 
-var postsArray = []
+var postsArray = [];
 
 function Post(source) {
   this.title = source.title;

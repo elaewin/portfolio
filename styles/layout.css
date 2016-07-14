@@ -33,6 +33,17 @@
   width: 100%;
 }
 
+#filters {
+  margin: .2em auto;
+  display: table;
+}
+
+select {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1em;
+}
+
+
 @media only screen and (min-width: 640px) {
 
 }
