@@ -1,3 +1,5 @@
+/* Main Nav */
+
 .header_h1 {
   font-size: 2em;
   float: left;
@@ -64,33 +66,48 @@
   width: 24px;
 }
 
-#posts div {
-  border: 1px 0 solid #272c28;
+a:link .grey {
+  color: #8c8880;
 }
+
+/* Home Section */
+
+#home div {
+  position: relative;
+  float: left;
+}
+
+#home p {
+  position: absolute;
+  font-size: 2em;
+  top: .5em;
+}
+
+.white {
+  color: #fff;
+}
+
+#home img  {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  vertical-align: middle;
+}
+/* Posts Section */
 
 .template {
   display: none;
 }
 
-a:link .grey {
-  color: #8c8880;
+#posts select {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1em;
+  margin: .4em 0;
+  outline: 1px red dashed;
 }
 
-#ancient div, #modern div {
-  position: relative;
-}
-
-#ancient p {
-  position: absolute;
-  font-size: 2em;
-  top: .5em;
-}
-
-#modern p {
-  position: absolute;
-  font-size: 2em;
-  top: .5em;
-  color: #fff;
+#posts div li {
+  width: 100%;
 }
 
 @media only screen and (min-width: 640px) {
@@ -133,7 +150,7 @@ a:link .grey {
   }
 }
 
-/* About Page */
+/* About Section */
 
 #about img {
   border-radius: 50%;

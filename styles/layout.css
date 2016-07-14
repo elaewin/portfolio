@@ -3,8 +3,11 @@
 }
 
 #page_header {
-  position: absolute;
-  width:100%;
+  position: fixed;
+  width: 100%;
+  background-color: rgba(34, 89, 42, 1);
+  color: #f5f2e1;
+  z-index: 20;
 }
 
 .post_header {
@@ -31,19 +34,15 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding-top: .4em;
 }
 
 #filters {
   margin: .2em auto;
-  display: table;
+  width: 100%;
 }
 
-select {
-  font-family: "Sorts Mill Goudy", serif;
-  font-size: 1em;
-}
-
-#ancient {
+.ancient {
   width: 100%;
   max-width: 500px;
   max-height: 500px;
