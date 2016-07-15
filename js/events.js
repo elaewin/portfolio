@@ -1,7 +1,10 @@
 'use strict';
 
-hamburgerMenu = function() {
-  $('.icon_menu').on('click mouseover', function() {
-    $('.main-nav ul').show();
+function hamburgerMenu() {
+  $('.main-nav div').on('click', function() {
+    $(this).toggleClass('icon-cross');
+    $('.main-nav ul').toggle();
   });
 };
+
+hamburgerMenu();

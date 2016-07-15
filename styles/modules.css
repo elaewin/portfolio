@@ -1,9 +1,11 @@
+
+
 /* Main Nav */
 
 .header_h1 {
   font-size: 2em;
   float: left;
-  padding: 0 0 .15em .15em;
+  padding: .2em 0 .15em .35em;
 }
 
 .main-nav {
@@ -14,20 +16,15 @@
 
 .main-nav ul {
   display: none;
+  position: absolute;
   padding: 0 .2em;
   list-style: none;
   clear: both;
-  position: absolute;
   right: 0;
-  top: 3em;
+  top: 3.6em;
   z-index: 10;
   width: 100%;
-  transition: 400ms all;
 }
-
-/*.main-nav:hover ul {
-  display: block;
-}*/
 
 .main-nav li {
   font-size: 1.5em;
@@ -36,6 +33,11 @@
   border-top: 1px solid #272c28;
   background-color: rgba(245, 242, 225, 0.9);
   width: 100%;
+}
+
+.main-nav li:hover, .main-nav li a:hover {
+  color: rgb(245, 242, 225);
+  background-color: #630300;
 }
 
 .main-nav li a {
@@ -55,11 +57,15 @@
   font-size: 1.5em;
 }
 
-.icon-menu {
-  font-size: 2em;
+.main-nav div {
+  font-size: 1.75em;
   margin: .15em;
   position: absolute;
   right: 0;
+}
+
+.icon-menu {
+  margin-top: .2em;
 }
 
 .github-icon {
@@ -67,7 +73,7 @@
   width: 24px;
 }
 
-a:link .grey {
+a:link .grey, a:visited .grey {
   color: #8c8880;
 }
 
@@ -103,8 +109,7 @@ a:link .grey {
 #posts select {
   font-family: "Sorts Mill Goudy", serif;
   font-size: 1em;
-  margin: .4em 0;
-  outline: 1px red dashed;
+  margin: .6em 0 .2em;
 }
 
 #posts div li {
@@ -113,18 +118,17 @@ a:link .grey {
 
 @media only screen and (min-width: 640px) {
   body {
-    background: #272c28 url("../img/headband.jpg") no-repeat fixed center top;
+    background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
+    background-size: cover;
   }
 
-  header, main, footer {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+ main {
+   padding-top: 6em;
+ }
 
   .header_h1 {
-    font-size: 2em;
-    float: left;
-    padding: 0 0 .2em .2em;
+    font-size: 3em;
+    padding: .3em .5em;
   }
 
   .icon-menu {
@@ -132,23 +136,42 @@ a:link .grey {
   }
 
   .main-nav {
-    padding: .5em;
-    width: 0 auto;
+    float: right;
+    display: block;
+    position: relative;
+    width: 50%;
   }
 
   .main-nav ul {
-    float: right;
-    display: block;
+    display: flex;
     padding: 0;
-    list-style: none;
+    position: inherit;
     clear: both;
+    top: 3.1em;
+    justify-content: flex-end;
+    float: right;
   }
 
   .main-nav li {
-    display: inline;
+    display: inline-block;
     border-top: none;
-    margin-left: 1em;
+    background-color: transparent;
+    padding: .3em .8em;
+    float: right;
+    width: auto;
   }
+
+  .main-nav li a {
+    padding-right: 0;
+    color: rgba(245, 242, 225, 1);
+  }
+
+  #posts select {
+    font-family: "Sorts Mill Goudy", serif;
+    font-size: 1em;
+    margin: .6em 1em .2em;
+  }
+  
 }
 
 /* About Section */
@@ -169,8 +192,4 @@ a:link .grey {
   padding-bottom: 2em;
   font-size: 1.1em;
   background: rgba(245, 242, 225, .7);
-}
-
-@media only screen and (min-width: 640px) {
-
 }

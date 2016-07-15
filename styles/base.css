@@ -7,12 +7,15 @@ body {
   font-size: 100%;
   font-family: "Sorts Mill Goudy", serif;
   color: #000;
-  /*background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;*/
+  background: #272c28 url("../img/headband_narrow.jpg") no-repeat fixed left top;
+  background-size: cover;
 }
 
 main {
-  padding-top: 3.2em;
+  padding-top: 3.6em;
 }
+
+
 
 /* Text Styles */
 h1 {
@@ -45,7 +48,7 @@ a:visited {
 
 #page_footer {
   color: #f5f2e1;
-  background-color: rgba(34, 89, 42, 0.7);
+  background-color: rgba(14, 13, 12, 0.7);
 }
 
 #page_footer a:link, #page_footer a:visited {

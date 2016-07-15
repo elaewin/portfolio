@@ -3,37 +3,18 @@
 var postsArray = [];
 
 function Post(source) {
-  this.title = source.title;
-  this.category = source.category;
-  this.pubDate = source.pubDate;
-  this.website = source.website;
-  this.githubRepo = source.githubRepo;
-  this.postContent = source.postContent;
+  for (key in opts) this[key] = opts[key];
 }
 
 Post.prototype.toHtml = function() {
-  var $newPost = $('article.template').clone();
-  $newPost.find('h2').text(this.title);
-  $newPost.attr('category', this.category);
-  if(this.website !== '') {
-    $newPost.find('.link a').attr('href', this.website);
-  } else {
-    $newPost.find('.link').addClass('grey');
-  };
-  if(this.githubRepo !== '') {
-    $newPost.find('.repo a').attr('href', this.githubRepo);
-  } else {
-    $newPost.find('.repo').addClass('grey');
-  };
-  $newPost.find('.post_body').html(this.postContent);
+  var source = $('#post_template').html();
+  var templateFunction = Handlebars.compile(source);
 
-  // Based on the example from the lab on 7/12.
-  $newPost.find('time[pubdate]').attr('title', this.pubDate);
-  $newPost.find('time').html('about ' + parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000) + ' days ago');
+  // Based on the example from the lab on 7/14.
+  this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
+  this.publishStatus = this.pubDate ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
 
-  $newPost.removeClass('template').addClass('post_content');
-
-  return ($newPost);
+  return templateFunction(this);
 };
 
 // Sorts by pubDate, ascending

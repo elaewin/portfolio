@@ -9,6 +9,22 @@
     <link type="text/css" rel="stylesheet" href="styles/layout.css">
     <link type="text/css" rel="stylesheet" href="styles/modules.css">
     <link type="text/css" rel="stylesheet" href="styles/icons.css">
+    <script id="post_template" type="text/x-handlebar-template">
+      <article author="{{author}}" category="{{category}}">
+        <header class="post_header">
+          <h2>{{title}}</h2>
+          <ul class="post_links">
+            <li class="link"><a class="icon-link" target="_blank" href="{{website}}"></a></li>
+            <li class="repo"><a class="icon-github" target="_blank" href="{{githubRepo}}"></a></li>
+          </ul>
+        </header>
+        <section class="post_body">{{post_body}}</section>
+        <a href="#" class="read_on">Show more &#8594;</a>
+        <footer class="post_footer">
+        <p>{{publishStatus}}</p>
+        </footer>
+      </article>
+    </script>
   </head>
   <body>
     <header id="page_header">
@@ -16,9 +32,9 @@
       <nav class="main-nav">
         <div class="icon-menu"></div>
         <ul>
-          <li class="tab" data-content="home"><a href="#">Home</a></li>
-          <li class="tab" data-content="posts"><a href="#">Modern Technology</a></li>
-          <li class="tab" data-content="bookbinding"><a href="https://ericawinberry.wordpress.com/portfolio/" target="_blank">Ancient Technology</a></li>
+          <li class="tab" data-content="posts"><a href="#">Home</a></li>
+          <li class="tab" data-content="posts"><a href="#">Blog</a></li>
+          <li class="tab" data-content="bookbinding"><a href="https://ericawinberry.wordpress.com/portfolio/" target="_blank">My Books</a></li>
           <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
       </nav>
@@ -47,20 +63,6 @@
             </li>
           </ul>
         </div>
-        <article class="template" category="stuff">
-          <header class="post">
-            <h2>Title</h2>
-            <ul class="post_links">
-              <li class="link"><a class="icon-link" target="_blank"></a></li>
-              <li class="repo"><a class="icon-github" target="_blank"></a></li>
-            </ul>
-          </header>
-          <section class="post_body">Content goes here.</section>
-          <a href="#" class="read_on">Show more &#8594;</a>
-          <footer class="post_footer">
-          <p>Published <time pubdate datetime="2000-01-01">Publish Time</time></p>
-          </footer>
-        </article>
       </section>
       <section id="about" class="tab-content">
         <img src="img/profile_pic.jpg">
@@ -76,6 +78,7 @@
         </ul>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="js/events.js"></script>
     <script src="js/data.js"></script>
     <script src="js/post.js"></script>
