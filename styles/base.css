@@ -7,7 +7,7 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
-  font-family: "Sorts Mill Goudy", serif;
+  font-family: "Open Sans", sans-serif;
   color: #000;
   background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
   background-size: cover;
@@ -19,10 +19,12 @@ main {
 
 /* Text Styles */
 h1 {
+  font-family: "Rakkas", cursive;;
   font-size: 2em;
 }
 
 h2 {
+  font-family: "Rakkas", cursive;
   font-size: 1.5em;
 }
 
