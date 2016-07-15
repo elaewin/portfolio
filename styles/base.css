@@ -50,7 +50,7 @@ a:visited {
   color: #630300;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 880px) {
   body {
     background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
     background-size: cover;
