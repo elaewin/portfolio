@@ -17,24 +17,27 @@ postView.handleMainNav = function() {
 };
 
 postView.populateFilters = function() {
-  $('article').not('.template').each(function() {
-    var $category, optionTag;
-    $category = $(this).attr('category');
-    optionTag = '<option value="' + $category + '">' + $category + '</option>';
-    if($('#category-filter option[value="' + $category + '"]').length === 0) {
-      $('#category-filter').append(optionTag);
+  $('article').each(function() {
+    var $categoryType = $(this).data('category');
+    var source = $('#category_filter_template').html();
+    var templateFunction = Handlebars.compile(source);
+    var data = {category: $categoryType};
+    var html = templateFunction(data);
+    if($('#category-filter option[value="' + $categoryType + '"]').length === 0) {
+      $('#category-filter').append(html);
     }
   });
 };
 
 postView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
-    if($(this).val()) {
-      var $cat = $(this).val();
+    var $cat = $(this).val();
+    console.log($cat);
+    if($cat) {
       $('article').hide();
-      $('article[category="' + $cat + '"]').fadeIn();
+      $('article[data-category="' + $cat + '"]').fadeIn();
     } else {
-      $('article').not('.template').fadeIn();
+      $('article').fadeIn();
     }
   });
 };
