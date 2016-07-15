@@ -33,20 +33,19 @@
 
 .main-nav li {
   background-color: rgba(245, 242, 225, 0.9);
+  color: #630300;
   font-size: 1.5em;
   text-align: right;
   border-top: 1px solid #272c28;
-  padding: .3em .2em;
+  padding-right: .4em;
+  padding-top: .25em;
+  padding-bottom: .2em;
   width: 100%;
 }
 
 .main-nav li:hover, .main-nav li a:hover {
   color: rgb(245, 242, 225);
   background-color: #630300;
-}
-
-.main-nav li a {
-  padding-right: .4em;
 }
 
 .media_icons {
@@ -95,6 +94,7 @@
   }
 
   .main-nav li {
+    color: rgba(245, 242, 225, 1);
     display: inline-block;
     border-top: none;
     background-color: transparent;

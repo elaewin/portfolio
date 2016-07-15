@@ -1,7 +1,9 @@
+'use strict';
+
 var postsArray = [];
 
 function Post(opts) {
-  for (key in opts) this[key] = opts[key];
+  for (var key in opts) this[key] = opts[key];
 };
 
 Post.prototype.toHtml = function() {
