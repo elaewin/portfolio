@@ -6,11 +6,12 @@ postView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     var $selectedTab = $(this).attr('data-content');
     $('section.tab-content').hide();
-    $('section.tab-content').each(function() {
-      if($(this).attr('id') === $selectedTab) {
-        $(this).fadeIn();
-      }
-    });
+    $('section.tab-content[id="' + $selectedTab + '"]').fadeIn();
+    // $('section.tab-content').each(function() {
+    //   if($(this).attr('id') === $selectedTab) {
+    //     $(this).fadeIn();
+    //   }
+    // });
   });
   $('.main-nav .tab:first').click();
 };
@@ -31,11 +32,7 @@ postView.handleCategoryFilter = function() {
     if($(this).val()) {
       var $cat = $(this).val();
       $('article').hide();
-      $('article').each(function() {
-        if ($(this).attr('category') === $cat) {
-          $(this).fadeIn();
-        }
-      });
+      $('article[category="' + $cat + '"]').fadeIn();
     } else {
       $('article').not('.template').fadeIn();
     }

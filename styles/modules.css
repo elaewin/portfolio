@@ -22,11 +22,12 @@
   top: 3em;
   z-index: 10;
   width: 100%;
+  transition: 400ms all;
 }
 
-.main-nav:hover ul {
+/*.main-nav:hover ul {
   display: block;
-}
+}*/
 
 .main-nav li {
   font-size: 1.5em;
