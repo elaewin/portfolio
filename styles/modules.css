@@ -3,7 +3,7 @@
 .header_h1 {
   font-size: 2em;
   float: left;
-  padding: 0 0 .15em .15em;
+  padding: .2em 0 .15em .35em;
 }
 
 .main-nav {
@@ -12,33 +12,40 @@
   width: 100%;
 }
 
-.main-nav ul {
-  display: none;
-  padding: 0 .2em;
-  list-style: none;
-  clear: both;
+.main-nav div {
+  font-size: 1.75em;
+  margin: .15em;
   position: absolute;
   right: 0;
-  top: 3em;
-  z-index: 10;
-  width: 100%;
 }
 
-.main-nav:hover ul {
-  display: block;
+.main-nav ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 3.6em;
+  width: 100%;
+  z-index: 10;
+  clear: both;
+  list-style: none;
+  padding: 0 .2em;
 }
 
 .main-nav li {
+  background-color: rgba(245, 242, 225, 0.9);
+  color: #630300;
   font-size: 1.5em;
-  padding: .3em .2em;
   text-align: right;
   border-top: 1px solid #272c28;
-  background-color: rgba(245, 242, 225, 0.9);
+  padding-right: .4em;
+  padding-top: .25em;
+  padding-bottom: .2em;
   width: 100%;
 }
 
-.main-nav li a {
-  padding-right: .4em;
+.main-nav li:hover, .main-nav li a:hover {
+  color: rgb(245, 242, 225);
+  background-color: #630300;
 }
 
 .media_icons {
@@ -55,75 +62,14 @@
 }
 
 .icon-menu {
-  font-size: 2em;
-  margin: .15em;
-  position: absolute;
-  right: 0;
+  margin-top: .2em;
 }
 
-.github-icon {
-  height: 24px;
-  width: 24px;
-}
-
-a:link .grey {
-  color: #8c8880;
-}
-
-/* Home Section */
-
-#home div {
-  position: relative;
-  float: left;
-}
-
-#home p {
-  position: absolute;
-  font-size: 2em;
-  top: .5em;
-}
-
-.white {
-  color: #fff;
-}
-
-#home img  {
-  width: 100%;
-  max-width: 500px;
-  max-height: 500px;
-  vertical-align: middle;
-}
-/* Posts Section */
-
-.template {
-  display: none;
-}
-
-#posts select {
-  font-family: "Sorts Mill Goudy", serif;
-  font-size: 1em;
-  margin: .4em 0;
-  outline: 1px red dashed;
-}
-
-#posts div li {
-  width: 100%;
-}
-
-@media only screen and (min-width: 640px) {
-  body {
-    background: #272c28 url("../img/headband.jpg") no-repeat fixed center top;
-  }
-
-  header, main, footer {
-    max-width: 1000px;
-    margin: 0 auto;
-  }
+@media only screen and (min-width: 880px) {
 
   .header_h1 {
-    font-size: 2em;
-    float: left;
-    padding: 0 0 .2em .2em;
+    font-size: 3em;
+    padding: .3em .5em;
   }
 
   .icon-menu {
@@ -131,26 +77,88 @@ a:link .grey {
   }
 
   .main-nav {
-    padding: .5em;
-    width: 0 auto;
+    float: right;
+    display: block;
+    position: relative;
+    width: 50%;
   }
 
   .main-nav ul {
-    float: right;
-    display: block;
+    display: flex;
     padding: 0;
-    list-style: none;
+    position: inherit;
     clear: both;
+    top: 3.1em;
+    justify-content: flex-end;
+    float: right;
   }
 
   .main-nav li {
-    display: inline;
+    color: rgba(245, 242, 225, 1);
+    display: inline-block;
     border-top: none;
-    margin-left: 1em;
+    background-color: transparent;
+    padding: .3em .8em;
+    float: right;
+    width: auto;
+  }
+
+  .main-nav li a {
+    padding-right: 0;
+    color: rgba(245, 242, 225, 1);
   }
 }
 
-/* About Section */
+/* Posts Section Styles */
+
+#filters {
+  margin: .2em auto;
+  width: 100%;
+}
+
+#filters li {
+  width: 100%;
+}
+
+#category-filter {
+  font-family: "Sorts Mill Goudy", serif;
+  font-size: 1em;
+  margin: .6em 0 .2em;
+}
+
+.post_header {
+  position: relative;
+}
+
+.post_footer {
+  font-style: italic;
+}
+
+.post_links li {
+  display: inline;
+  padding: 0 .2em;
+}
+
+.post_body li {
+  font-size: 1em;
+  margin: .4em .8em;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+a:link .grey, a:visited .grey {
+  color: #8c8880;
+}
+
+@media only screen and (min-width: 880px) {
+  #category-filter {
+    font-family: "Sorts Mill Goudy", serif;
+    font-size: 1em;
+    margin: .6em 1em .2em;
+  }
+}
+
+/* About Section Styles */
 
 #about img {
   border-radius: 50%;
@@ -170,6 +178,25 @@ a:link .grey {
   background: rgba(245, 242, 225, .7);
 }
 
-@media only screen and (min-width: 640px) {
+/* Home Section Styles */
+#home div {
+  position: relative;
+  float: left;
+}
 
+#home p {
+  position: absolute;
+  font-size: 2em;
+  top: .5em;
+}
+
+#home img  {
+  width: 100%;
+  max-width: 500px;
+  max-height: 500px;
+  vertical-align: middle;
+}
+
+.white_text {
+  color: #fff;
 }

@@ -6,38 +6,38 @@ postView.handleMainNav = function() {
   $('.main-nav').on('click', '.tab', function() {
     var $selectedTab = $(this).attr('data-content');
     $('section.tab-content').hide();
-    $('section.tab-content').each(function() {
-      if($(this).attr('id') === $selectedTab) {
-        $(this).fadeIn();
-      }
-    });
+    $('section.tab-content[id="' + $selectedTab + '"]').fadeIn();
+    // $('section.tab-content').each(function() {
+    //   if($(this).attr('id') === $selectedTab) {
+    //     $(this).fadeIn();
+    //   }
+    // });
   });
   $('.main-nav .tab:first').click();
 };
 
 postView.populateFilters = function() {
-  $('article').not('.template').each(function() {
-    var $category, optionTag;
-    $category = $(this).attr('category');
-    optionTag = '<option value="' + $category + '">' + $category + '</option>';
-    if($('#category-filter option[value="' + $category + '"]').length === 0) {
-      $('#category-filter').append(optionTag);
+  $('article').each(function() {
+    var $categoryType = $(this).data('category');
+    var source = $('#category_filter_template').html();
+    var templateFunction = Handlebars.compile(source);
+    var data = {category: $categoryType};
+    var html = templateFunction(data);
+    if($('#category-filter option[value="' + $categoryType + '"]').length === 0) {
+      $('#category-filter').append(html);
     }
   });
 };
 
 postView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
-    if($(this).val()) {
-      var $cat = $(this).val();
+    var $cat = $(this).val();
+    console.log($cat);
+    if($cat) {
       $('article').hide();
-      $('article').each(function() {
-        if ($(this).attr('category') === $cat) {
-          $(this).fadeIn();
-        }
-      });
+      $('article[data-category="' + $cat + '"]').fadeIn();
     } else {
-      $('article').not('.template').fadeIn();
+      $('article').fadeIn();
     }
   });
 };

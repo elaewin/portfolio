@@ -41,6 +41,7 @@
 }
 .icon-cross:before {
     content: "\ea0f";
+    font-size: .75em;
 }
 .icon-facebook2:before {
     content: "\ea91";

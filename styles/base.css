@@ -1,3 +1,5 @@
+/* Base styles include setting heading sizes, default link styles, default font styles, and body backgrounds. There should be no need to use !important in a Base style. */
+
 img {
   max-width: 100%;
 }
@@ -7,11 +9,12 @@ body {
   font-size: 100%;
   font-family: "Sorts Mill Goudy", serif;
   color: #000;
-  /*background: #272c28 url("../img/headband.jpg") no-repeat fixed left top;*/
+  background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
+  background-size: cover;
 }
 
 main {
-  padding-top: 3.2em;
+  padding-top: 3.6em;
 }
 
 /* Text Styles */
@@ -21,6 +24,10 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
 }
 
 p, article {
@@ -43,11 +50,12 @@ a:visited {
   color: #630300;
 }
 
-#page_footer {
-  color: #f5f2e1;
-  background-color: rgba(34, 89, 42, 0.7);
-}
+@media only screen and (min-width: 880px) {
+  body {
+    background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
+    background-size: cover;
+  }
 
-#page_footer a:link, #page_footer a:visited {
-  color: #f5f2e1;
-}
+ main {
+   padding-top: 6em;
+ }
