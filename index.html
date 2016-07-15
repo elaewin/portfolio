@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="styles/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Sorts+Mill+Goudy:400,400i&subset=latin-ext" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="styles/base.css">
-    <link type="text/css" rel="stylesheet" href="styles/layout.css">
-    <link type="text/css" rel="stylesheet" href="styles/modules.css">
-    <link type="text/css" rel="stylesheet" href="styles/icons.css">
-    <script id="post_template" type="text/x-handlebar-template">
-      <article author="{{author}}" category="{{category}}">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="styles/icons.css">
+    <script id="post_template" type="text/x-handlebars-template">
+      <article data-author="{{author}}" data-category="{{category}}">
         <header class="post_header">
           <h2>{{title}}</h2>
           <ul class="post_links">
@@ -18,7 +18,7 @@
             <li class="repo"><a class="icon-github" target="_blank" href="{{githubRepo}}"></a></li>
           </ul>
         </header>
-        <section class="post_body">{{post_body}}</section>
+        <section class="post_body">{{{body}}}</section>
         <a href="#" class="read_on">Show more &#8594;</a>
         <footer class="post_footer">
         <p>{{publishStatus}}</p>
@@ -34,14 +34,14 @@
         <ul>
           <li class="tab" data-content="posts"><a href="#">Home</a></li>
           <li class="tab" data-content="posts"><a href="#">Blog</a></li>
-          <li class="tab" data-content="bookbinding"><a href="https://ericawinberry.wordpress.com/portfolio/" target="_blank">My Books</a></li>
+          <li class="tab" data-content="bookbinding">My Books</li>
           <li class="tab" data-content="about"><a href="#">About</a></li>
         </ul>
       </nav>
     </header>
     <div class="clearfix"></div>
     <main>
-      <section id="home" class="tab-content">
+      <!-- <section id="home" class="tab-content">
         <div>
           <a href="https://ericawinberry.wordpress.com/portfolio/" target="_blank">
             <img class="ancient" src="img/headband_square.jpg" />
@@ -52,7 +52,7 @@
           <img src="img/keys_square.jpg">
           <p class="white">Modern Technology</p>
         </div>
-      </section>
+      </section> -->
       <section id="posts" class="tab-content">
         <div>
           <ul id="filters">

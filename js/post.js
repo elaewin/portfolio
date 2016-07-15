@@ -1,10 +1,8 @@
-'use strict';
-
 var postsArray = [];
 
-function Post(source) {
+function Post(opts) {
   for (key in opts) this[key] = opts[key];
-}
+};
 
 Post.prototype.toHtml = function() {
   var source = $('#post_template').html();
