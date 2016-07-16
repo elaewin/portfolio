@@ -7,7 +7,7 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Actor", sans-serif;
   color: #000;
   background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
   background-size: cover;
@@ -15,21 +15,27 @@ body {
 
 main {
   padding-top: 3.6em;
+  background-color: rgba(245, 242, 225, 0.3);
+  padding-bottom: 4em;
+  min-width: 320px;
 }
 
 /* Text Styles */
 h1 {
-  font-family: "Rakkas", cursive;;
+  font-family: "Rakkas", cursive;
   font-size: 2em;
+  letter-spacing: 0.075em;
 }
 
 h2 {
   font-family: "Rakkas", cursive;
   font-size: 1.5em;
+  letter-spacing: 0.05em;
 }
 
 h3 {
   font-size: 1.25em;
+  letter-spacing: 0.05em;
 }
 
 p, article {
@@ -52,7 +58,7 @@ a:visited {
   color: #630300;
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 685px) {
   body {
     background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
     background-size: cover;
@@ -60,4 +66,22 @@ a:visited {
 
  main {
    padding-top: 6em;
+   padding-bottom: 2em;
+ }
+
+ h1 {
+   font-family: "Rakkas", cursive;
+   font-size: 2em;
+   letter-spacing: 0.075em;
+ }
+
+ h2 {
+   font-family: "Rakkas", cursive;
+   font-size: 1.5em;
+   letter-spacing: 0.075em;
+ }
+
+ h3 {
+   font-size: 1.25em;
+   letter-spacing: 0.075em;
  }
