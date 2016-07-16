@@ -44,6 +44,11 @@ postView.handleCategoryFilter = function() {
 
 postView.setTeasers = function() {
   $('article').each(function() {
+    var $postBody = $(this).find('.post_body');
+    console.log($postBody.html());
+    if(($postBody.children()).length < 2) {
+      $(this).find('.read_on').hide();
+    }
     $('.post_body *').not(':first-child').hide();
     $(this).removeClass('show');
   });
