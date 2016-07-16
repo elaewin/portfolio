@@ -81,6 +81,7 @@
     display: block;
     position: relative;
     width: 50%;
+    font-family: "Rakkas", cursive;
   }
 
   .main-nav ul {
