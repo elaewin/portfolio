@@ -1,9 +1,9 @@
 /* Main Nav */
 
 .header_h1 {
-  font-size: 1.85em;
+  /*font-size: 1.85em;*/
   float: left;
-  padding: .2em 0 .15em .35em;
+  padding: .2em 0 0 .35em;
 }
 
 .main-nav {
@@ -67,11 +67,11 @@
   margin-top: .2em;
 }
 
-@media only screen and (min-width: 690px) {
+@media only screen and (min-width: 640px) {
 
   .header_h1 {
-    font-size: 3em;
-    padding: .3em .5em;
+    /*font-size: 3em;*/
+    /*padding: .3em .5em;*/
   }
 
   .icon-menu {
@@ -152,7 +152,7 @@ a:link .grey, a:visited .grey {
   color: #8c8880;
 }
 
-@media only screen and (min-width: 690px) {
+@media only screen and (min-width: 640px) {
   #category-filter {
     font-family: "Sorts Mill Goudy", serif;
     font-size: 1em;
@@ -187,7 +187,7 @@ a:link .grey, a:visited .grey {
   font-size: 1em;
 }
 
-@media only screen and (min-width: 690px) {
+@media only screen and (min-width: 640px) {
   #about img {
     margin: 3% auto 1em;
   }

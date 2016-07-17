@@ -4,9 +4,13 @@ img {
   max-width: 100%;
 }
 
+html {
+  font-size: 1.125em;
+}
+
 body {
-  line-height: 1.5;
-  font-size: 110%;
+  line-height: 1.45;
+  font-size: 100%;
   font-family: "Hind Guntur", sans-serif;
   color: #000;
   background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
@@ -23,25 +27,31 @@ main {
 }
 
 /* Text Styles */
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-family: 'Rakkas',  cursive;;
+  font-weight: inherit;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+}
+
 h1 {
-  font-family: "Rakkas", cursive;
-  font-size: 2em;
-  letter-spacing: 0.05em;
+  margin-top: 0;
+  font-size: 2.441em;
 }
 
-h2 {
-  font-family: "Rakkas", cursive;
-  font-size: 1.5em;
-  letter-spacing: 0.05em;
-}
+h2 {font-size: 1.953em;}
 
-h3 {
-  font-size: 1.25em;
-  letter-spacing: 0.05em;
-}
+h3 {font-size: 1.563em;}
+
+h4 {font-size: 1.25em;}
+
+small, .font_small {font-size: 0.8em;}
 
 p {
-  padding: .4em 0;
+  /*padding: .4em 0;*/
+  margin-bottom: 1.3em;
 }
 
 article {
@@ -64,7 +74,7 @@ a:visited {
   color: #630300;
 }
 
-@media only screen and (min-width: 685px) {
+@media only screen and (min-width: 640px) {
   body {
     background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
     background-size: cover;
@@ -77,19 +87,22 @@ a:visited {
    padding-bottom: 2em;
 }
 
- h1 {
-   font-family: "Rakkas", cursive;
-   font-size: 2em;
-   letter-spacing: 0.075em;
- }
+h1, h2, h3, h4 {
+ margin: 1.414em 0 0.5em;
+ font-family: 'Rakkas',  cursive;;
+ font-weight: inherit;
+ line-height: 1.2;
+}
 
- h2 {
-   font-family: "Rakkas", cursive;
-   font-size: 1.75em;
-   letter-spacing: 0.075em;
- }
+h1 {
+ margin-top: 0;
+ font-size: 3.157em;
+}
 
- h3 {
-   font-size: 1.25em;
-   letter-spacing: 0.075em;
- }
+h2 {font-size: 2.369em;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
