@@ -7,6 +7,8 @@
 }
 
 .main-nav {
+  font-family: "Rakkas", cursive;
+  letter-spacing: 0.05em;
   position: absolute;
   right: .15em;
   width: 100%;
@@ -77,10 +79,9 @@
   }
 
   .main-nav {
-    font-family: "Rakkas", cursive;
-    height: 100%;
     letter-spacing: 0.075em;
-    max-width: 45%;
+    height: 100%;
+    max-width: 50%;
   }
 
   .main-nav ul {
@@ -174,9 +175,8 @@ a:link .grey, a:visited .grey {
 }
 
 #about p {
-  padding-bottom: 2em;
-  font-size: 1.1em;
-  background: rgba(245, 242, 225, .7);
+  padding: .4em 1em;
+  font-size: 1em;
 }
 
 /* Home Section Styles */
