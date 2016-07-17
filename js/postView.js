@@ -2,20 +2,6 @@
 
 var postView = {};
 
-postView.handleMainNav = function() {
-  $('.main-nav').on('click', '.tab', function() {
-    var $selectedTab = $(this).attr('data-content');
-    $('section.tab-content').hide();
-    $('section.tab-content[id="' + $selectedTab + '"]').fadeIn();
-    // $('section.tab-content').each(function() {
-    //   if($(this).attr('id') === $selectedTab) {
-    //     $(this).fadeIn();
-    //   }
-    // });
-  });
-  $('.main-nav .tab:first').click();
-};
-
 postView.populateFilters = function() {
   $('article').each(function() {
     var $categoryType = $(this).data('category');
@@ -32,7 +18,6 @@ postView.populateFilters = function() {
 postView.handleCategoryFilter = function() {
   $('#category-filter').on('change', function() {
     var $cat = $(this).val();
-    console.log($cat);
     if($cat) {
       $('article').hide();
       $('article[data-category="' + $cat + '"]').fadeIn();
@@ -71,4 +56,3 @@ postView.setTeasers = function() {
 postView.setTeasers();
 postView.populateFilters();
 postView.handleCategoryFilter();
-postView.handleMainNav();
