@@ -7,6 +7,8 @@
 }
 
 .main-nav {
+  font-family: "Rakkas", cursive;
+  letter-spacing: 0.05em;
   position: absolute;
   right: .15em;
   width: 100%;
@@ -65,7 +67,7 @@
   margin-top: .2em;
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 690px) {
 
   .header_h1 {
     font-size: 3em;
@@ -77,29 +79,28 @@
   }
 
   .main-nav {
-    float: right;
-    display: block;
-    position: relative;
-    width: 50%;
+    letter-spacing: 0.075em;
+    height: 100%;
+    max-width: 50%;
   }
 
   .main-nav ul {
-    display: flex;
-    padding: 0;
-    position: inherit;
+    align-items: flex-start;
     clear: both;
-    top: 3.1em;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    height: 100%;
     justify-content: flex-end;
-    float: right;
+    padding: 0;
+    top: 0;
   }
 
   .main-nav li {
-    color: rgba(245, 242, 225, 1);
-    display: inline-block;
-    border-top: none;
     background-color: transparent;
-    padding: .3em .8em;
-    float: right;
+    border-top: none;
+    color: rgba(245, 242, 225, 1);
+    display: inline-flex;
+    padding: .3em 1em;
     width: auto;
   }
 
@@ -121,9 +122,10 @@
 }
 
 #category-filter {
-  font-family: "Sorts Mill Goudy", serif;
+  font-family: "Rakkas", cursive;
   font-size: 1em;
   margin: .6em 0 .2em;
+  letter-spacing: 0.075em;
 }
 
 .post_header {
@@ -150,7 +152,7 @@ a:link .grey, a:visited .grey {
   color: #8c8880;
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 690px) {
   #category-filter {
     font-family: "Sorts Mill Goudy", serif;
     font-size: 1em;
@@ -173,9 +175,8 @@ a:link .grey, a:visited .grey {
 }
 
 #about p {
-  padding-bottom: 2em;
-  font-size: 1.1em;
-  background: rgba(245, 242, 225, .7);
+  padding: .4em 1em;
+  font-size: 1em;
 }
 
 /* Home Section Styles */

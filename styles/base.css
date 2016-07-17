@@ -6,33 +6,47 @@ img {
 
 body {
   line-height: 1.5;
-  font-size: 100%;
-  font-family: "Sorts Mill Goudy", serif;
+  font-size: 110%;
+  font-family: "Hind Guntur", sans-serif;
   color: #000;
   background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
   background-size: cover;
 }
 
 main {
+  background: rgba(245, 242, 225, 0.3);
+  background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(0, 0, 0, 0));
   padding-top: 3.6em;
+  padding-bottom: 4em;
+  min-width: 320px;
+  overflow: auto;
 }
 
 /* Text Styles */
 h1 {
+  font-family: "Rakkas", cursive;
   font-size: 2em;
+  letter-spacing: 0.075em;
 }
 
 h2 {
+  font-family: "Rakkas", cursive;
   font-size: 1.5em;
+  letter-spacing: 0.05em;
 }
 
 h3 {
   font-size: 1.25em;
+  letter-spacing: 0.05em;
 }
 
-p, article {
+p {
+  padding: .4em 0;
+}
+
+article {
   font-size: 1em;
-  padding: .4em .8em;
+  padding: 0 .8em;
 }
 
 article {
@@ -50,12 +64,32 @@ a:visited {
   color: #630300;
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 685px) {
   body {
     background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
     background-size: cover;
   }
 
  main {
+   background: rgba(245, 242, 225, 0.3);
+   background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(255, 255, 255, 0));
    padding-top: 6em;
+   padding-bottom: 2em;
+}
+
+ h1 {
+   font-family: "Rakkas", cursive;
+   font-size: 2em;
+   letter-spacing: 0.075em;
+ }
+
+ h2 {
+   font-family: "Rakkas", cursive;
+   font-size: 1.75em;
+   letter-spacing: 0.075em;
+ }
+
+ h3 {
+   font-size: 1.25em;
+   letter-spacing: 0.075em;
  }

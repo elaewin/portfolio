@@ -10,7 +10,18 @@
   background-color: rgba(14, 13, 12, 0.9);
   color: #f5f2e1;
   z-index: 20;
+  display: flex;
+  justify-content: flex-start;
 }
+
+/*#text-container {
+  position: fixed;
+  top: 3.6em;
+  bottom: 1em;
+  overflow: auto;
+  outline: 2px dashed blue;
+}*/
+
 
 #page_footer {
   position: fixed;
@@ -19,12 +30,13 @@
   padding-top: .4em;
   color: #f5f2e1;
   background-color: rgba(14, 13, 12, 0.7);
+
 }
 
 #page_footer a:link, #page_footer a:visited {
   color: #f5f2e1;
 }
 
-@media only screen and (min-width: 880px) {
+@media only screen and (min-width: 685px) {
 
 }

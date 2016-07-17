@@ -44,7 +44,11 @@ postView.handleCategoryFilter = function() {
 
 postView.setTeasers = function() {
   $('article').each(function() {
-    $('.post_body *:nth-of-type(n+2)').hide();
+    var $postBody = $(this).find('.post_body');
+    if(($postBody.children()).length < 2) {
+      $(this).find('.read_on').hide();
+    }
+    $('.post_body *').not(':first-child').hide();
     $(this).removeClass('show');
   });
 
@@ -54,13 +58,13 @@ postView.setTeasers = function() {
     var $selection = $(event.target).prev();
     if($selection.hasClass('show')) {
       $(event.target).html('Show more &#8594;');
-      $('.show *:nth-of-type(n+2)').toggle();
+      $('.show *').not(':first-child').hide();
       $($selection).removeClass('show');
     } else {
       $(event.target).html('&#8592; Show less');
       $selection.addClass('show');
     }
-    $('.show *:nth-of-type(n+2)').toggle();
+    $('.show *').fadeIn();
   });
 };
 
