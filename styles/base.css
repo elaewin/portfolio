@@ -7,7 +7,7 @@ img {
 body {
   line-height: 1.5;
   font-size: 100%;
-  font-family: "Raleway", sans-serif;
+  font-family: "Biryani", sans-serif;
   color: #000;
   background: #f5f2e1 url("../img/headband_narrow.jpg") no-repeat fixed left top;
   background-size: cover;
@@ -15,7 +15,7 @@ body {
 
 main {
   background: rgba(245, 242, 225, 0.3);
-  background: linear-gradient(rgba(245, 242, 225, 1) 80%, rgba(0, 0, 0, 1));
+  background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(0, 0, 0, 1));
   padding-top: 3.6em;
   padding-bottom: 4em;
   min-width: 320px;
