@@ -67,7 +67,7 @@
   margin-top: .2em;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 740px) {
 
   .header_h1 {
     /*font-size: 3em;*/
@@ -81,7 +81,7 @@
   .main-nav {
     letter-spacing: 0.075em;
     height: 100%;
-    max-width: 50%;
+    max-width: 48%;
   }
 
   .main-nav ul {
@@ -152,7 +152,7 @@ a:link .grey, a:visited .grey {
   color: #8c8880;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 740px) {
   #category-filter {
     font-family: "Sorts Mill Goudy", serif;
     font-size: 1em;
@@ -187,7 +187,7 @@ a:link .grey, a:visited .grey {
   font-size: 1em;
 }
 
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 740px) {
   #about img {
     margin: 3% auto 1em;
   }
