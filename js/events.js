@@ -7,10 +7,6 @@ pageEvents.hamburgerMenu = function() {
     $(this).toggleClass('icon-cross');
     $('.main-nav ul').toggle();
   });
-  //
-  // $('.main-nav').on('click', '.tab', function() {
-  //   if($);
-  // });
 };
 
 pageEvents.handleMainNav = function() {
@@ -21,7 +17,6 @@ pageEvents.handleMainNav = function() {
     $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow');
     if($hamburger.hasClass('icon-cross')) {
       $hamburger.toggleClass('icon-cross');
-      console.log($(this).parent());
       $(this).parent().fadeOut();
     }
   });

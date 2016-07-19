@@ -14,15 +14,6 @@
   justify-content: flex-start;
 }
 
-/*#text-container {
-  position: fixed;
-  top: 3.6em;
-  bottom: 1em;
-  overflow: auto;
-  outline: 2px dashed blue;
-}*/
-
-
 #page_footer {
   position: fixed;
   bottom: 0;
