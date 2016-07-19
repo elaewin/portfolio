@@ -2,17 +2,37 @@
 
 var postView = {};
 
-postView.populateFilters = function() {
-  $('article').each(function() {
-    var $categoryType = $(this).data('category');
-    var source = $('#category_filter_template').html();
-    var templateFunction = Handlebars.compile(source);
-    var data = {category: $categoryType};
-    var html = templateFunction(data);
-    if($('#category-filter option[value="' + $categoryType + '"]').length === 0) {
-      $('#category-filter').append(html);
+postView.hamburgerMenu = function() {
+  $('.main-nav div').on('click', function() {
+    $(this).toggleClass('icon-cross');
+    $('.main-nav ul').toggle();
+  });
+};
+
+postView.handleMainNav = function() {
+  $('.main-nav').on('click', '.tab', function(event) {
+    var $selectedTab = $(this).attr('data-content');
+    var $hamburger = $('.main-nav div');
+    $('section.tab-content').hide();
+    $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow');
+    if($hamburger.hasClass('icon-cross')) {
+      $hamburger.toggleClass('icon-cross');
+      $(this).parent().fadeOut();
     }
   });
+  $('.main-nav .tab:last').click();
+};
+
+postView.renderIndexPage = function() {
+  Post.all.forEach(function(obj) {
+    $('#posts').append(obj.toHtml('#post_template'));
+    if($('#category-filter option:contains("' + obj.category + '")').length === 0) {
+      $('#category-filter').append(obj.toHtml('#category_filter_template'));
+    }
+  });
+  postView.handleCategoryFilter();
+  postView.handleMainNav();
+  postView.setTeasers();
 };
 
 postView.handleCategoryFilter = function() {
@@ -53,6 +73,5 @@ postView.setTeasers = function() {
   });
 };
 
-postView.setTeasers();
-postView.populateFilters();
-postView.handleCategoryFilter();
+postView.hamburgerMenu();
+Post.fetchAll();
