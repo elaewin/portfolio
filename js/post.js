@@ -12,6 +12,7 @@
     var template = Handlebars.compile($(scriptTemplateId).text());
     this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
     this.publishStatus = this.pubDate ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
+    // this.wordCount = Post.getWordCount();
     // this.numPerCategory = Post.countPerCategory();
     return template(this);
   };

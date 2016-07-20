@@ -30,9 +30,11 @@ postView.renderIndexPage = function() {
       $('#category-filter').append(obj.toHtml('#category_filter_template'));
     }
   });
+  postView.hamburgerMenu();
   postView.handleCategoryFilter();
   postView.handleMainNav();
   postView.setTeasers();
+  postView.getWordCount();
 };
 
 postView.handleCategoryFilter = function() {
@@ -74,5 +76,13 @@ postView.setTeasers = function() {
   });
 };
 
-postView.hamburgerMenu();
+postView.getWordCount = function () {
+  var wordCount = Post.allPosts.map(function(post) {
+    return post.body.match(/\w+/g).length;
+  }). reduce(function(totalCount, currentCount) {
+    return totalCount + currentCount;
+  });
+  $('.word_count').text(wordCount);
+};
+
 Post.fetchAll();
