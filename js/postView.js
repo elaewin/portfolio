@@ -69,6 +69,7 @@ postView.setTeasers = function() {
       $(event.target).html('&#8592; Show less');
       $selection.addClass('show');
     }
+    
     $('.show *').fadeIn();
   });
 };
