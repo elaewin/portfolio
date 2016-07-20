@@ -22,5 +22,21 @@
     "website": "",
     "githubRepo": "https://github.com/elaewin/learning_journal",
     "body": "One of my assignments for CF 201 was a daily learning journal, used to reflect on what I'd learned on any given day. I tried to put in at least one small bit of code each day, as well as bullet point &#8220;things to remember&#8221;."
+  },
+  {
+    "title": "Python Learning Journal",
+    "category": "blog",
+    "pubDate": "2016-02-13",
+    "website": "http://fierce-taiga-41297.herokuapp.com/",
+    "githubRepo": "https://github.com/elaewin/learning-journal-python200",
+    "body": "Learning Journal class project using Pyramid for UWPCE Python 200, Winter 2016"
+  },
+  {
+    "title": "Cookie Stand",
+    "category": "lab assignment",
+    "pubDate": "2016-06-24",
+    "website": "https://elaewin.github.io/cookie_stand/",
+    "githubRepo": "https://github.com/elaewin/cookie_stand",
+    "body": "For this week-long lab assignment, we built a website for a fictional company called Pat's Salmon Cookies."
   }
 ]
