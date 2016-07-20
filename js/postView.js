@@ -24,7 +24,7 @@ postView.handleMainNav = function() {
 };
 
 postView.renderIndexPage = function() {
-  Post.all.forEach(function(obj) {
+  Post.allPosts.forEach(function(obj) {
     $('#posts').append(obj.toHtml('#post_template'));
     if($('#category-filter option:contains("' + obj.category + '")').length === 0) {
       $('#category-filter').append(obj.toHtml('#category_filter_template'));
