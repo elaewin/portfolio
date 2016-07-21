@@ -24,15 +24,17 @@ postView.handleMainNav = function() {
 };
 
 postView.renderIndexPage = function() {
-  Post.all.forEach(function(obj) {
+  Post.allPosts.forEach(function(obj) {
     $('#posts').append(obj.toHtml('#post_template'));
     if($('#category-filter option:contains("' + obj.category + '")').length === 0) {
       $('#category-filter').append(obj.toHtml('#category_filter_template'));
     }
   });
+  postView.hamburgerMenu();
   postView.handleCategoryFilter();
   postView.handleMainNav();
   postView.setTeasers();
+  postView.getWordCount();
 };
 
 postView.handleCategoryFilter = function() {
@@ -69,9 +71,18 @@ postView.setTeasers = function() {
       $(event.target).html('&#8592; Show less');
       $selection.addClass('show');
     }
+
     $('.show *').fadeIn();
   });
 };
 
-postView.hamburgerMenu();
+postView.getWordCount = function () {
+  var wordCount = Post.allPosts.map(function(post) {
+    return post.body.match(/\w+/g).length;
+  }). reduce(function(totalCount, currentCount) {
+    return totalCount + currentCount;
+  });
+  $('.word_count').text(wordCount);
+};
+
 Post.fetchAll();
