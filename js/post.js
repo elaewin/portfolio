@@ -24,7 +24,7 @@
     });
   };
 
-  Post.fetchAll = function() {
+  Post.fetchAll = function(nextFunction) {
     if (localStorage.postData) {
       $.ajax({
         url: 'data/postData.json',
@@ -32,28 +32,27 @@
         success: function(data,response,xhr) {
           var eTag = xhr.getResponseHeader('ETag');
           if(!localStorage.eTag || eTag !== localStorage.eTag) {
-            Post.getAllData();
+            Post.getAllData('data/postData.json');
           } else {
             Post.loadAll(JSON.parse(localStorage.postData));
-            postView.renderIndexPage();
+            nextFunction();
           }
         }
       });
     } else {
-      Post.getAllData();
+      Post.getAllData('data/postData.json');
     }
   };
 
-  Post.getAllData = function() {
-    $.getJSON('data/postData.json', function(data, response, xhr) {
+  Post.getAllData = function(url) {
+    $.getJSON('url', function(data, response, xhr) {
       localStorage.postData = JSON.stringify(data);
       localStorage.eTag = xhr.getResponseHeader('ETag');
       Post.loadAll(data);
-      postView.renderIndexPage();
+      nextFunction();
     });
   };
 
-  // Working on this, commenting out in order to finish hw assignment
   Post.countPerCategory = function(categoryToCount) {
     var count = Post.allPosts.map(function(post) {
       return post.category;
@@ -66,6 +65,6 @@
     }, []);
     return count;
   };
-  
+
   module.Post = Post;
 })(window);

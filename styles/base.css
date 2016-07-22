@@ -15,7 +15,7 @@ body {
 
 main {
   background: rgba(245, 242, 225, 0.3);
-  background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(0, 0, 0, 0));
+  background: linear-gradient(rgba(245, 242, 225, 0.3) 90%, rgba(0, 0, 0, 0));
   padding-top: 3.6em;
   padding-bottom: 4em;
   min-width: 320px;
@@ -74,7 +74,6 @@ a:visited {
    background: rgba(245, 242, 225, 0.3);
    background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(255, 255, 255, 0));
    padding-top: 6em;
-   padding-bottom: 2em;
 }
 
  h1 {
@@ -93,4 +92,3 @@ a:visited {
    font-size: 1.25em;
    letter-spacing: 0.075em;
  }
- 
