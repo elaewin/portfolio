@@ -66,6 +66,6 @@
     }, []);
     return count;
   };
-
+  
   module.Post = Post;
 })(window);
