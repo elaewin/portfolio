@@ -67,7 +67,9 @@
   margin-top: .2em;
 }
 
-@media only screen and (min-width: 690px) {
+/* Put in a break at 860 for header? */
+
+@media only screen and (min-width: 730px) {
 
   .header_h1 {
     font-size: 3em;
@@ -152,7 +154,7 @@ a:link .grey, a:visited .grey {
   color: #8c8880;
 }
 
-@media only screen and (min-width: 690px) {
+@media only screen and (min-width: 730px) {
   #category-filter {
     font-family: "Sorts Mill Goudy", serif;
     font-size: 1em;
@@ -187,7 +189,7 @@ a:link .grey, a:visited .grey {
   font-size: 1em;
 }
 
-@media only screen and (min-width: 690px) {
+@media only screen and (min-width: 730px) {
   #about img {
     margin: 3% auto 1em;
   }
