@@ -45,7 +45,7 @@
   };
 
   Post.getAllData = function(url) {
-    $.getJSON('url', function(data, response, xhr) {
+    $.getJSON(url, function(data, response, xhr) {
       localStorage.postData = JSON.stringify(data);
       localStorage.eTag = xhr.getResponseHeader('ETag');
       Post.loadAll(data);
