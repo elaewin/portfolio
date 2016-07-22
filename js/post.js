@@ -12,8 +12,7 @@
     var template = Handlebars.compile($(scriptTemplateId).text());
     this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
     this.publishStatus = this.pubDate ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
-    // this.wordCount = Post.getWordCount();
-    // this.numPerCategory = Post.countPerCategory();
+    this.numPerCategory = Post.countPerCategory(this.category).length;
     return template(this);
   };
 
@@ -55,14 +54,18 @@
   };
 
   // Working on this, commenting out in order to finish hw assignment
-  // Post.countPerCategory = function() {
-  //   var count = Post.allPosts.map(function (post) {
-  //     return post.category;
-  //   });
-  //   .reduce(function(categoryOfPost, currentPost, index, array) {
-  //     if(categoryOfPost.)
-  //   }, []);
-  // };
+  Post.countPerCategory = function(categoryToCount) {
+    var count = Post.allPosts.map(function(post) {
+      return post.category;
+    })
+    .reduce(function(categoryOfPost, currentCategory) {
+      if(currentCategory === categoryToCount) {
+        categoryOfPost.push(currentCategory);
+      }
+      return categoryOfPost;
+    }, []);
+    return count;
+  };
 
   module.Post = Post;
 })(window);

@@ -26,7 +26,8 @@ postView.handleMainNav = function() {
 postView.renderIndexPage = function() {
   Post.allPosts.forEach(function(obj) {
     $('#posts').append(obj.toHtml('#post_template'));
-    if($('#category-filter option:contains("' + obj.category + '")').length === 0) {
+    var $filterContents = $('#category-filter option:contains("' + obj.category + '")');
+    if($filterContents.length === 0) {
       $('#category-filter').append(obj.toHtml('#category_filter_template'));
     }
   });
@@ -71,7 +72,6 @@ postView.setTeasers = function() {
       $(event.target).html('&#8592; Show less');
       $selection.addClass('show');
     }
-
     $('.show *').fadeIn();
   });
 };
