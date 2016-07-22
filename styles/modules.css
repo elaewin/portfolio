@@ -67,8 +67,6 @@
   margin-top: .2em;
 }
 
-/* Put in a break at 860 for header? */
-
 @media only screen and (min-width: 730px) {
 
   .header_h1 {
@@ -83,7 +81,7 @@
   .main-nav {
     letter-spacing: 0.075em;
     height: 100%;
-    max-width: 50%;
+    max-width: 48%;
   }
 
   .main-nav ul {

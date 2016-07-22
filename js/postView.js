@@ -4,17 +4,15 @@
 
   var postView = {};
 
-  postView.hamburgerMenu = function() {
-    $('.main-nav div').on('click', function() {
+  postView.handleMainNav = function() {
+    var $hamburger = $('.main-nav div');
+    $hamburger.on('click', function() {
       $(this).toggleClass('icon-cross');
       $('.main-nav ul').toggle();
     });
-  };
 
-  postView.handleMainNav = function() {
     $('.main-nav').on('click', '.tab', function(event) {
       var $selectedTab = $(this).attr('data-content');
-      var $hamburger = $('.main-nav div');
       $('section.tab-content').hide();
       $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow');
       if($hamburger.hasClass('icon-cross')) {
@@ -33,7 +31,6 @@
         $('#category-filter').append(obj.toHtml('#category_filter_template'));
       }
     });
-    postView.hamburgerMenu();
     postView.handleCategoryFilter();
     postView.handleMainNav();
     postView.setTeasers();
