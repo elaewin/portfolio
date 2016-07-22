@@ -14,11 +14,15 @@
   justify-content: flex-start;
 }
 
+#text_container {
+  padding-bottom: 4.5rem;
+}
+
 #page_footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  padding-top: .4em;
+  padding-top: .75rem;
   color: #f5f2e1;
   background-color: rgba(14, 13, 12, 0.7);
 
@@ -29,5 +33,7 @@
 }
 
 @media only screen and (min-width: 685px) {
-  /* Nothing here? */
+  #text_container {
+    padding-bottom: 3rem;
+  }
 }

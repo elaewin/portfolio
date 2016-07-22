@@ -3,20 +3,20 @@
 .header_h1 {
   font-size: 1.85em;
   float: left;
-  padding: .2em 0 .15em .35em;
+  padding: .2em 0 .15em .5rem;
 }
 
 .main-nav {
   font-family: "Rakkas", cursive;
   letter-spacing: 0.05em;
   position: absolute;
-  right: .15em;
+  right: .15rem;
   width: 100%;
 }
 
 .main-nav div {
   font-size: 1.75em;
-  margin: .15em;
+  margin: .15rem;
   position: absolute;
   right: 0;
 }
@@ -30,7 +30,7 @@
   z-index: 10;
   clear: both;
   list-style: none;
-  padding: 0 .2em;
+  padding: 0 .5rem;
 }
 
 .main-nav li {
@@ -71,7 +71,7 @@
 
   .header_h1 {
     font-size: 3em;
-    padding: .3em .5em;
+    padding: .3em 1rem;
   }
 
   .icon-menu {
