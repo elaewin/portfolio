@@ -88,7 +88,7 @@
   };
 
 
-  Post.fetchAll();
+  Post.fetchAll(postView.renderIndexPage);
   module.postView = postView;
-  
+
 })(window);

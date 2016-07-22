@@ -53,7 +53,6 @@
     });
   };
 
-  // Working on this, commenting out in order to finish hw assignment
   Post.countPerCategory = function(categoryToCount) {
     var count = Post.allPosts.map(function(post) {
       return post.category;
@@ -66,6 +65,6 @@
     }, []);
     return count;
   };
-  
+
   module.Post = Post;
 })(window);
