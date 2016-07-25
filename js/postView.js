@@ -75,6 +75,7 @@
     });
   };
 
+  //function not working//
   postView.getWordCount = function () {
     var wordCount = Post.allPosts.map(function(post) {
       return post.body.match(/\w+/g).length;
