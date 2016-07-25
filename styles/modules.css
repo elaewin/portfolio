@@ -171,14 +171,6 @@ a:link .grey, a:visited .grey {
   margin: 7% auto 1em;
 }
 
-#about div {
-  background:
-  linear-gradient(
-    rgba(0, 0, 0, 0) 50%,
-    rgba(245, 242, 225, 0.5) 90%,
-    rgba(0, 0, 0, 0) 98%);
-}
-
 #about h2 {
   text-align: center;
 }
@@ -191,14 +183,6 @@ a:link .grey, a:visited .grey {
 @media only screen and (min-width: 730px) {
   #about img {
     margin: 3% auto 1em;
-  }
-
-  #about div {
-    background:
-      radial-gradient(
-        rgba(245, 242, 225, 0.6),
-        rgba(0,0,0,0)
-        );
   }
 
   #about p {
