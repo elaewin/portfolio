@@ -14,7 +14,7 @@
   justify-content: flex-start;
 }
 
-#text_container {
+#text-container {
   padding-bottom: 4.5rem;
 }
 
@@ -33,7 +33,7 @@
 }
 
 @media only screen and (min-width: 685px) {
-  #text_container {
+  #text-container {
     padding-bottom: 3rem;
   }
 }
