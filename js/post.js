@@ -32,7 +32,7 @@
         success: function(data,response,xhr) {
           var eTag = xhr.getResponseHeader('ETag');
           if(!localStorage.eTag || eTag !== localStorage.eTag) {
-            Post.getAllData('data/postData.json');
+            Post.getAllData();
           } else {
             Post.loadAll(JSON.parse(localStorage.postData));
             nextFunction();
@@ -40,12 +40,12 @@
         }
       });
     } else {
-      Post.getAllData('data/postData.json');
+      Post.getAllData();
     }
   };
 
-  Post.getAllData = function(url) {
-    $.getJSON(url, function(data, response, xhr) {
+  Post.getAllData = function(nextFunction) {
+    $.getJSON('data/postData.json', function(data, response, xhr) {
       localStorage.postData = JSON.stringify(data);
       localStorage.eTag = xhr.getResponseHeader('ETag');
       Post.loadAll(data);
