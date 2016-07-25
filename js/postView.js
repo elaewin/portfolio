@@ -14,7 +14,7 @@
     $('.main-nav').on('click', '.tab', function(event) {
       var $selectedTab = $(this).attr('data-content');
       $('section.tab-content').hide();
-      $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow');
+      $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow').scrollTop();
       if($hamburger.hasClass('icon-cross')) {
         $hamburger.toggleClass('icon-cross');
         $(this).parent().fadeOut();
@@ -75,7 +75,6 @@
     });
   };
 
-  //function not working//
   postView.getWordCount = function () {
     var wordCount = Post.allPosts.map(function(post) {
       return post.body.match(/\w+/g).length;

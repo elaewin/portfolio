@@ -32,7 +32,7 @@
         success: function(data,response,xhr) {
           var eTag = xhr.getResponseHeader('ETag');
           if(!localStorage.eTag || eTag !== localStorage.eTag) {
-            Post.getAllData();
+            Post.getAllData(nextFunction);
           } else {
             Post.loadAll(JSON.parse(localStorage.postData));
             nextFunction();
@@ -40,7 +40,7 @@
         }
       });
     } else {
-      Post.getAllData();
+      Post.getAllData(nextFunction);
     }
   };
 
