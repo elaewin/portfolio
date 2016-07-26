@@ -5,12 +5,11 @@
   var aboutController = {};
 
   aboutController.reveal = function(){
-    console.log('about got clicked!');
-    $('section.tab-content').hide();
-    // if($('.main-nav div').hasClass('icon-cross')) {
-    //   $(this).toggleClass('icon-cross');
-    //   $(this).parent().fadeOut();
-    // }
+    $('.tab-content').hide();
+    if($('.main-nav div').hasClass('icon-cross')) {
+      $('.main-nav div').removeClass('icon-cross');
+      $('.main-nav ul').fadeOut();
+    }
     $('#about').fadeIn('slow').scrollTop();
   };
 
