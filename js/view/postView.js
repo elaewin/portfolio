@@ -4,23 +4,17 @@
 
   var postView = {};
 
-  postView.handleMainNav = function() {
+  postView.hamburgerMenu = function() {
     var $hamburger = $('.main-nav div');
     $hamburger.on('click', function() {
-      $(this).toggleClass('icon-cross');
-      $('.main-nav ul').toggle();
-    });
-
-    $('.main-nav').on('click', '.tab', function(event) {
-      var $selectedTab = $(this).attr('data-content');
-      $('section.tab-content').hide();
-      $('section.tab-content[id="' + $selectedTab + '"]').fadeIn('slow').scrollTop();
-      if($hamburger.hasClass('icon-cross')) {
+      if($hamburger.hasClass('icon-menu')) {
         $hamburger.toggleClass('icon-cross');
-        $(this).parent().fadeOut();
+        $('.main-nav ul').toggle();
+      // } else {
+      //   $hamburger.toggleClass('icon-cross');
+      //   $(this).parent().fadeOut();
       }
     });
-    $('.main-nav .tab:last').click();
   };
 
   postView.renderIndexPage = function() {
@@ -32,7 +26,7 @@
       }
     });
     postView.handleCategoryFilter();
-    postView.handleMainNav();
+    postView.hamburgerMenu();
     postView.setTeasers();
     postView.getWordCount();
   };

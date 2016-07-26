@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "301 Portfolio Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elaewin/portfolio.git"
+  },
+  "author": "elaewin@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elaewin/portfolio/issues"
+  },
+  "homepage": "https://github.com/elaewin/portfolio#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}

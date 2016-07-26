@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles/icons.css">
     <script id="post_template" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
-        <!--could use project_header as a classname to make your header classes more distinguishable -->
         <header class="post_header">
           <h2>{{title}}</h2>
           <ul class="post_links">
@@ -37,10 +36,10 @@
         <nav class="main-nav">
           <div class="icon-menu"></div>
           <ul>
-            <li class="tab" data-content="posts"><a href="#">Blog</a></li>
+            <li class="tab" data-content="posts"><a href="/">Blog</a></li>
             <li class="tab" data-content="bookbinding">My Books</li>
-            <li class="tab" data-content="about"><a href="#">About</a></li>
-            <li class="tab" data-content="posts"><a href="#">Home</a></li>
+            <li class="tab" data-content="about"><a href="/about">About</a></li>
+            <li class="tab" data-content="posts"><a href="/">Home</a></li>
           </ul>
         </nav>
       </div>
@@ -78,7 +77,11 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
-    <script src="js/post.js"></script>
-    <script src="js/postView.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
+    <script src="js/model/post.js"></script>
+    <script src="js/view/postView.js"></script>
+    <script src="js/controller/aboutController.js"></script>
+    <script src="js/controller/postController.js"></script>
+    <script src="js/controller/routes.js"></script>
   </body>
 </html>
