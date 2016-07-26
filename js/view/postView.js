@@ -10,9 +10,6 @@
       if($hamburger.hasClass('icon-menu')) {
         $hamburger.toggleClass('icon-cross');
         $('.main-nav ul').toggle();
-      // } else {
-      //   $hamburger.toggleClass('icon-cross');
-      //   $(this).parent().fadeOut();
       }
     });
   };
