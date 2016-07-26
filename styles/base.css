@@ -14,8 +14,8 @@ body {
 }
 
 main {
-  background: rgba(245, 242, 225, 0.3);
-  background: linear-gradient(rgba(245, 242, 225, 0.3) 90%, rgba(0, 0, 0, 0));
+  background: rgba(245, 242, 225, 0.4);
+  background: linear-gradient(rgba(245, 242, 225, 0.4) 90%, rgba(0, 0, 0, 0));
   padding-top: 3.6em;
   padding-bottom: 4em;
   min-width: 320px;
@@ -64,15 +64,13 @@ a:visited {
   color: #630300;
 }
 
-@media only screen and (min-width: 685px) {
+@media only screen and (min-width: 730px) {
   body {
     background: #272c28 url("../img/headband_wide.jpg") no-repeat fixed center top;
     background-size: cover;
   }
 
  main {
-   background: rgba(245, 242, 225, 0.3);
-   background: linear-gradient(rgba(245, 242, 225, 0.3) 80%, rgba(255, 255, 255, 0));
    padding-top: 6em;
 }
 
