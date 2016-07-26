@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 (function(module) {
 
@@ -6,8 +6,8 @@
 
   postController.reveal = function() {
     $('section.tab-content').hide();
-    $('#posts').fadeIn();
+    $('#posts').fadeIn('slow').scrollTop();
   };
 
-  module.postController = postController;  
+  module.postController = postController;
 })(window);
