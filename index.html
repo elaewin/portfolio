@@ -29,7 +29,7 @@
       <option value="{{category}}">{{category}} ({{numPerCategory}})</option>
     </script>
     <script id="blog-template" type="text/x-handlebars-template">
-      <!-- Template goes here! -->
+      <article data-category="{{category}}">{{{blog_entry}}}</article>
     </script>
   </head>
   <body>
@@ -60,6 +60,8 @@
               </li>
             </ul>
           </div>
+        </section>
+        <section id="blog" class="tab-content" >
         </section>
         <section id="about" class="tab-content">
           <img src="img/profile_pic.jpg">
