@@ -4,19 +4,6 @@
 
   var postView = {};
 
-  postView.hamburgerMenu = function() {
-    var $hamburger = $('.main-nav div');
-    $hamburger.on('click', function() {
-      if($hamburger.hasClass('icon-menu')) {
-        $hamburger.toggleClass('icon-cross');
-        $('.main-nav ul').toggle();
-      // } else {
-      //   $hamburger.toggleClass('icon-cross');
-      //   $(this).parent().fadeOut();
-      }
-    });
-  };
-
   postView.renderIndexPage = function() {
     Post.allPosts.forEach(function(obj) {
       $('#posts').append(obj.toHtml('#post_template'));
@@ -26,7 +13,6 @@
       }
     });
     postView.handleCategoryFilter();
-    postView.hamburgerMenu();
     postView.setTeasers();
     postView.getWordCount();
   };

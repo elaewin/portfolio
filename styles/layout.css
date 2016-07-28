@@ -36,3 +36,20 @@
     padding-bottom: 3rem;
   }
 }
+
+/* Cleanup of journal entries from github */
+article h2 a, article h3 a, article h4 a, article h5 a {
+  display: none;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  margin: 0.5em;
+  font-family: monospace;
+  border: 1px solid rgba(14, 13, 12, 0.7);
+  border-radius: 5px;
+  background: rgba(245, 242, 225, 0.8);
+  width: auto;
+}

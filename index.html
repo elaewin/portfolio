@@ -28,6 +28,10 @@
     <script id="category_filter_template" type="text/x-handlebars-template">
       <option value="{{category}}">{{category}} ({{numPerCategory}})</option>
     </script>
+    <script id="blog-template" type="text/x-handlebars-template">
+      <article data-category="{{category}}">{{{blog_entry}}}
+      <a href="#" class="read_more">Show more &#8594;</a></article>
+    </script>
   </head>
   <body>
     <header id="page_header">
@@ -36,7 +40,7 @@
         <nav class="main-nav">
           <div class="icon-menu"></div>
           <ul>
-            <li class="tab" data-content="posts"><a href="/">Blog</a></li>
+            <li class="tab" data-content="blog"><a href="/blog">Blog</a></li>
             <li class="tab" data-content="bookbinding">My Books</li>
             <li class="tab" data-content="about"><a href="/about">About</a></li>
             <li class="tab" data-content="posts"><a href="/">Home</a></li>
@@ -46,7 +50,7 @@
     </header>
     <div class="clearfix"></div>
     <main>
-      <div id="text_container"> <!-- Use this to fix background? -->
+      <div id="text_container">
         <section id="posts" class="tab-content">
           <div>
             <ul id="filters">
@@ -57,6 +61,8 @@
               </li>
             </ul>
           </div>
+        </section>
+        <section id="blog" class="tab-content" >
         </section>
         <section id="about" class="tab-content">
           <img src="img/profile_pic.jpg">
@@ -76,11 +82,18 @@
         </ul>
     </footer>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/page.js/1.7.1/page.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.5/marked.min.js"></script>
+    <script src="js/assets/githubToken.js"></script>
+    <script src="js/model/github.js"></script>
     <script src="js/model/post.js"></script>
+    <script src="js/view/blogView.js"></script>
     <script src="js/view/postView.js"></script>
+    <script src="js/controller/mainController.js"></script>
     <script src="js/controller/aboutController.js"></script>
+    <script src="js/controller/blogController.js"></script>
     <script src="js/controller/postController.js"></script>
     <script src="js/controller/routes.js"></script>
   </body>

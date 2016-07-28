@@ -14,8 +14,8 @@ body {
 }
 
 main {
-  background: rgba(245, 242, 225, 0.4);
-  background: linear-gradient(rgba(245, 242, 225, 0.4) 90%, rgba(0, 0, 0, 0));
+  background: rgba(245, 242, 225, 0.5);
+  background: linear-gradient(rgba(245, 242, 225, 0.5) 95%, rgba(0, 0, 0, 0));
   padding-top: 3.6em;
   padding-bottom: 4em;
   min-width: 320px;
@@ -23,6 +23,7 @@ main {
 }
 
 /* Text Styles */
+
 h1 {
   font-family: "Rakkas", cursive;
   font-size: 2em;
@@ -36,12 +37,25 @@ h2 {
 }
 
 h3 {
+  font-family: "Rakkas", cursive;
   font-size: 1.25em;
   letter-spacing: 0.05em;
 }
 
+h5 {
+  font-weight: bold;
+}
+
 p {
   padding: .4em 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 article {
@@ -50,7 +64,7 @@ article {
 }
 
 article {
-  margin-bottom: 1em;
+  margin: 1rem 0 2rem;
 }
 
 /* Link Styles */
@@ -75,18 +89,14 @@ a:visited {
 }
 
  h1 {
-   font-family: "Rakkas", cursive;
-   font-size: 2em;
    letter-spacing: 0.075em;
  }
 
  h2 {
-   font-family: "Rakkas", cursive;
    font-size: 1.75em;
    letter-spacing: 0.075em;
  }
 
  h3 {
-   font-size: 1.25em;
    letter-spacing: 0.075em;
  }

@@ -68,6 +68,11 @@
   margin-top: .2em;
 }
 
+#blog li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
 @media only screen and (min-width: 730px) {
 
   .header_h1 {
