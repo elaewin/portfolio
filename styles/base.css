@@ -42,8 +42,20 @@ h3 {
   letter-spacing: 0.05em;
 }
 
+h5 {
+  font-weight: bold;
+}
+
 p {
   padding: .4em 0;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
 }
 
 article {
