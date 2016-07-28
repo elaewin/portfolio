@@ -29,7 +29,8 @@
       <option value="{{category}}">{{category}} ({{numPerCategory}})</option>
     </script>
     <script id="blog-template" type="text/x-handlebars-template">
-      <article data-category="{{category}}">{{{blog_entry}}}</article>
+      <article data-category="{{category}}">{{{blog_entry}}}
+      <a href="#" class="read_on">Show more &#8594;</a></article>
     </script>
   </head>
   <body>
@@ -88,7 +89,7 @@
     <script src="js/assets/githubToken.js"></script>
     <script src="js/model/github.js"></script>
     <script src="js/model/post.js"></script>
-    <script src="js/view/githubView.js"></script>
+    <script src="js/view/blogView.js"></script>
     <script src="js/view/postView.js"></script>
     <script src="js/controller/mainController.js"></script>
     <script src="js/controller/aboutController.js"></script>
