@@ -9,11 +9,13 @@
   };
 
   blogView.renderBlogEntry = function() {
+    console.log('Callback reached!');
+    // console.log(blogObj.githubData);
     $('#blog').empty().append(
       blogObj.githubData.map(blogCompiler)
     );
-    blogView.cleanUpHtml();
-    blogView.setTeasers();
+    // blogView.cleanUpHtml();
+    // blogView.setTeasers();
   };
 
   blogView.cleanUpHtml = function() {
