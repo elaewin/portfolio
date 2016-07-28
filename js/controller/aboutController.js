@@ -10,7 +10,7 @@
       $('.main-nav div').removeClass('icon-cross');
       $('.main-nav ul').fadeOut();
     }
-    $('#about').fadeIn('slow').scrollTop();
+    $('#blog').fadeIn('slow').scrollTop();
   };
 
   module.aboutController = aboutController;

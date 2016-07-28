@@ -15,27 +15,28 @@
       },
       success: function(fileData, message, xhr) {
         fileData.forEach(function(current) {
-          var re = 'lj' + (/\w+/);
-          if(current.name === re) {
+          var regex = /lj_code201_day\d\d\.md/i;
+          if(current.name.match(regex)) {
             $.ajax({
-              url: current.url,
+              url: current.url + '&sort=name',
               type: 'GET',
               headers: {
-                'Accept': 'application/vnd.github.v3.raw',
+                'Accept': 'application/vnd.github.v3.html',
                 'Authorization': 'token ' + githubToken,
               },
               success: function(urlData, message, xhr) {
-                console.log(urlData);
+                var blogObj = {
+                  'category': 'Code Fellows 201',
+                  'blog_entry': urlData
+                };
+                githubObj.ghData.push(blogObj);
               }
-            });
+            }).done(callback);
           }
         });
       }
     });
-    console.log(githubObj.ghData);
   };
-
-  githubObj.requestData();
 
   module.githubObj = githubObj;
 })(window);
