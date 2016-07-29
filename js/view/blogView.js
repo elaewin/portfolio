@@ -10,7 +10,6 @@
   };
 
   blogView.renderBlogEntry = function() {
-    // console.log(blogObj.githubData[0]);
     $('#blog').empty().append(
       blogObj.githubData.map(blogCompiler)
     );
