@@ -5,10 +5,12 @@
 
   var blogCompiler = function(obj) {
     var template = Handlebars.compile($('#blog-template').html());
+    console.log('something is happening!');
     return template(obj);
   };
 
   blogView.renderBlogEntry = function() {
+    // console.log(blogObj.githubData[0]);
     $('#blog').empty().append(
       blogObj.githubData.map(blogCompiler)
     );
