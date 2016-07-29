@@ -29,7 +29,7 @@ var proxy2 = function(request, response) {
 };
 
 app.get('/github/*', proxyGitHub);
-app.get('/repoReq/*', proxy2);
+app.get('/reposReq/*', proxy2);
 
 app.use(express.static('./'));
 
