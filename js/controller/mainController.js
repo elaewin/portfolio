@@ -14,7 +14,15 @@
     });
   };
 
+  mainController.contactLinkHandler = function() {
+    $('#email-placeholder').click( function() {
+      var username = 'erica.winberry', domain = 'gmail.com';
+      window.location.href = 'mailto:' + username + '@' + domain;
+    } );
+  };
+
   mainController.hamburgerMenu();
+  mainController.contactLinkHandler();
 
   module.mainController = mainController;
 })(window);
