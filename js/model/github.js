@@ -33,6 +33,7 @@
             'category': 'CF201',
             'blog_entry': urlData
           };
+          console.log(newBlogObj);
           blogObj.githubData.push(newBlogObj);
         },
         method: 'GET',

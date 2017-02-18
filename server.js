@@ -1,7 +1,20 @@
-var express = require('express'),
-  requestProxy = require('express-request-proxy'),
-  port = process.env.PORT || 3000,
-  app = express();
+'use strict';
+
+const pg = require('pg');
+const express = require('express');
+const bodyParser = require('body-parser');
+const requestProxy = require('express-request-proxy');
+
+const port = process.env.PORT || 3000;
+const app = express();
+
+const conString = 'postgres://localhost:5432';
+const client = new pg.Client(conString);
+client.connect();
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('./public'));
 
 var proxyGitHub = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
