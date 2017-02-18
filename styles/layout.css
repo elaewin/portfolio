@@ -27,7 +27,7 @@
 
 }
 
-#page_footer a:link, #page_footer a:visited {
+#page_footer a:link, #page_footer a:visited, #email-placeholder {
   color: #f5f2e1;
 }
 
