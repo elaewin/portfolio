@@ -10,7 +10,7 @@
       $('.main-nav div').removeClass('icon-cross');
       $('.main-nav ul').fadeOut();
     }
-    $('#posts').fadeIn('slow').scrollTop();
+    $('#projects').fadeIn('slow').scrollTop();
   };
 
   module.postController = postController;

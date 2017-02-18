@@ -117,7 +117,7 @@
   }
 }
 
-/* Posts Section Styles */
+/* Projects Section Styles */
 
 #filters {
   margin: .2em auto;
@@ -184,6 +184,7 @@ a:link .grey, a:visited .grey {
 #about p {
   padding: .4em 1em .75em;
   font-size: 1em;
+  text-align: justify;
 }
 
 @media only screen and (min-width: 730px) {
