@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
+
     <script id="post_template" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
         <header class="post_header">
           <h2>{{title}}</h2>
           <ul class="post_links">
+            <li>Language(s): {{languages}}</li>
             <li class="link"><a class="icon-link" target="_blank" href="{{website}}"></a></li>
             <li class="repo"><a class="icon-github" target="_blank" href="{{githubRepo}}"></a></li>
           </ul>
@@ -25,13 +27,16 @@
         </footer>
       </article>
     </script>
+
     <script id="category_filter_template" type="text/x-handlebars-template">
       <option value="{{category}}">{{category}} ({{numPerCategory}})</option>
     </script>
+
     <script id="blog-template" type="text/x-handlebars-template">
       <article data-category="{{category}}">{{{blog_entry}}}
       <a href="#" class="read_more">Show more &#8594;</a></article>
     </script>
+
   </head>
   <body>
     <header id="page_header">
@@ -42,8 +47,8 @@
           <ul>
             <li class="tab" data-content="blog"><a href="/blog">Blog</a></li>
             <!-- <li class="tab" data-content="https://ericawinberry.wordpress.com/portfolio/" target="_blank">My Books</li> -->
+            <li class="tab" data-content="posts"><a href="/">Projects</a></li>
             <li class="tab" data-content="about"><a href="/about">About</a></li>
-            <li class="tab" data-content="posts"><a href="/">Home</a></li>
           </ul>
         </nav>
       </div>

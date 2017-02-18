@@ -6,9 +6,7 @@ Basic Hamburger Nav layout and execution taken from [Code Fellows 301 lab #1](ht
 
 Myerweb Reset Stylesheet from [http://meyerweb.com/eric/tools/css/reset/](http://meyerweb.com/eric/tools/css/reset/).
 
-Image credits:
-'Backlit Rainbows' keyboard image by [Matt, from Flickr](https://www.flickr.com/photos/d35ign/6151412276), used via an Attribution-NonCommercial-ShareAlike 2.0 Generic (CC BY-NC-SA 2.0) License ([human readable version](https://creativecommons.org/licenses/by-nc-sa/2.0/))
-
+<!-- Image credits: -->
 ---
 
 Colors (generated via [Adobe Kuler](https://color.adobe.com/create/color-wheel/)):
