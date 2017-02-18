@@ -2,6 +2,7 @@
   {
     "title": "Eat Fellows",
     "category": "group project",
+    "languages": "HTML, CSS, JavaScript",
     "pubDate": "2016-07-10",
     "website": "https://elaewin.github.io/eat_fellows/",
     "githubRepo": "https://github.com/elaewin/eat_fellows",
@@ -10,6 +11,7 @@
   {
     "title": "BusMall",
     "category": "lab assignment",
+    "languages": "HTML, CSS, JavaScript",
     "pubDate": "2016-07-01",
     "website": "https://elaewin.github.io/bus_mall/",
     "githubRepo": "https://github.com/elaewin/bus_mall",
@@ -18,6 +20,7 @@
   {
     "title": "Learning Journal",
     "category": "blog",
+    "languages": "Markdown",
     "pubDate": "2016-07-09",
     "website": "/blog",
     "githubRepo": "https://github.com/elaewin/learning_journal",
@@ -26,6 +29,7 @@
   {
     "title": "Python Learning Journal",
     "category": "blog",
+    "languages": "HTML, CSS, Python",
     "pubDate": "2016-02-13",
     "website": "http://fierce-taiga-41297.herokuapp.com/",
     "githubRepo": "https://github.com/elaewin/learning-journal-python200",
@@ -34,6 +38,7 @@
   {
     "title": "Cookie Stand",
     "category": "lab assignment",
+    "languages": "HTML, CSS, JavaScript",
     "pubDate": "2016-06-24",
     "website": "https://elaewin.github.io/cookie_stand/",
     "githubRepo": "https://github.com/elaewin/cookie_stand",
