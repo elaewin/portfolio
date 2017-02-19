@@ -30,12 +30,14 @@
         url: newUrl,
         success: function(urlData, message, xhr) {
           // console.log(urlData);
-          var splitByDate = urlData.split('.md" id="file"')[0];
+          var splitByDate = urlData.split('.md" id="file"')[0].split('201_')[1];
           console.log(splitByDate);
           var newBlogObj = {
+            'day': splitByDate,
             'category': 'CF201',
             'blog_entry': urlData
           };
+          console.log(newBlogObj);
           blogObj.githubData.push(newBlogObj);
         },
         method: 'GET',
