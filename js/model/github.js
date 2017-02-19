@@ -18,8 +18,9 @@
       method: 'GET',
       async: true,
     }).done(function() {
-      blogObj.sortBlogEntries();
       setTimeout(callback, 1000);
+    }).done(function () {
+      blogObj.sortBlogEntries();
     });
   };
 
@@ -31,9 +32,9 @@
         url: newUrl,
         success: function(urlData, message, xhr) {
           // console.log(urlData);
-          var splitByDate = urlData.split('.md" id="file"')[0].split('201_')[1];
+          var splitByDate = urlData.split('.md" id="file"')[0].split('201_day')[1];
           var newBlogObj = {
-            'day': splitByDate,
+            'classDay': splitByDate,
             'category': 'CF201',
             'blog_entry': urlData
           };
@@ -47,7 +48,7 @@
 
   blogObj.sortBlogEntries = function(blogEntries) {
     blogEntries.sort(function(a,b) {
-      return (a.day) - (b.day);
+      return (b.classDay) - (a.classDay);
     });
   };
 
