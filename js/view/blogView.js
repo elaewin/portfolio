@@ -2,7 +2,7 @@
 
 (function(module) {
   var blogView = {};
-  var blogOffset = 100;
+  var blogOffset = 125;
 
   var blogCompiler = function(obj) {
     var template = Handlebars.compile($('#blog-template').html());
@@ -22,7 +22,6 @@
     $('h2 a').remove();
     $('h3 a').remove();
     $('h5 a').remove();
-    $('div')
     $('#blog svg').remove();
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
