@@ -29,11 +29,13 @@
       $.ajax({
         url: newUrl,
         success: function(urlData, message, xhr) {
+          // console.log(urlData);
+          var splitByDate = urlData.split('.md" id="file"')[0];
+          console.log(splitByDate);
           var newBlogObj = {
             'category': 'CF201',
             'blog_entry': urlData
           };
-          console.log(urlData);
           blogObj.githubData.push(newBlogObj);
         },
         method: 'GET',
