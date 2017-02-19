@@ -2,7 +2,7 @@
 
 (function(module) {
   var blogView = {};
-  var blogOffset = 100;
+  var blogOffset = 50;
 
   var blogCompiler = function(obj) {
     var template = Handlebars.compile($('#blog-template').html());
