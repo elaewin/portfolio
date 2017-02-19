@@ -19,7 +19,7 @@ main {
   padding-top: 3.6em;
   padding-bottom: 4em;
   min-width: 320px;
-  overflow: auto;
+  /*overflow: scroll;;*/
 }
 
 /* Text Styles */

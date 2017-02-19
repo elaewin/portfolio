@@ -3,6 +3,7 @@
 (function(module) {
 
   var postView = {};
+  var postOffset = 125; // offset for scrolling to top of closed post/project.
 
   postView.renderIndexPage = function() {
     Post.allPosts.forEach(function(obj) {
@@ -45,8 +46,11 @@
       var $selection = $(event.target).prev();
       if($selection.hasClass('show')) {
         $(event.target).html('Show more &#8594;');
-        $('.show *').not(':first-child').hide();
+        $('.show *').not(':first-child').slideUp('slow');
         $($selection).removeClass('show');
+        $('body').animate({
+          scrollTop: $(event.target).parent().offset().top - postOffset
+        }, 'slow');
       } else {
         $(event.target).html('&#8592; Show less');
         $selection.addClass('show');

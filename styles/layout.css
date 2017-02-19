@@ -57,3 +57,8 @@ article h2 a, article h3 a, article h4 a, article h5 a {
   background: rgba(245, 242, 225, 0.8);
   width: auto;
 }
+
+.markdown-body {
+  margin-bottom: 0;
+  padding: 0;
+}
