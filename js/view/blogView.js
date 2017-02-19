@@ -2,6 +2,7 @@
 
 (function(module) {
   var blogView = {};
+  var blogOffset = 100;
 
   var blogCompiler = function(obj) {
     var template = Handlebars.compile($('#blog-template').html());
@@ -21,6 +22,7 @@
     $('h2 a').remove();
     $('h3 a').remove();
     $('h5 a').remove();
+    $('div')
     $('#blog svg').remove();
     $('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
@@ -43,8 +45,11 @@
       var $selection = $(event.target).prev();
       if($selection.hasClass('show')) {
         $(event.target).html('Show more &#8594;');
-        $('.announce article p').nextAll().slideUp();
+        $('.announce article p').nextAll().slideUp('slow');
         $($selection).removeClass('show');
+        $('body').animate({
+          scrollTop: $(event.target).parent().offset().top - blogOffset
+        }, 'slow');
       } else {
         $(event.target).html('&#8592; Show less');
         $selection.addClass('show');
