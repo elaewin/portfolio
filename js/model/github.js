@@ -18,9 +18,8 @@
       method: 'GET',
       async: true,
     }).done(function() {
+      blogObj.sortBlogEntries(blogObj.githubData);
       setTimeout(callback, 1000);
-    }).done(function () {
-      blogObj.sortBlogEntries();
     });
   };
 
