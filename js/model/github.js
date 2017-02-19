@@ -26,6 +26,7 @@
     var regex = /lj_code201_day\d\d\.md/i;
     if(current.name.match(regex)) {
       var newUrl = '/reposReq' + current.url.split('https://api.github.com')[1] + '&sort=name';
+      console.log(newURL);
       $.ajax({
         url: newUrl,
         success: function(urlData, message, xhr) {
@@ -33,7 +34,6 @@
             'category': 'CF201',
             'blog_entry': urlData
           };
-          console.log(newBlogObj);
           blogObj.githubData.push(newBlogObj);
         },
         method: 'GET',
