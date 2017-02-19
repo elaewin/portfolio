@@ -6,7 +6,7 @@
 
   postView.renderIndexPage = function() {
     Post.allPosts.forEach(function(obj) {
-      $('#posts').append(obj.toHtml('#post_template'));
+      $('#projects').append(obj.toHtml('#project_template'));
       var $filterContents = $('#category-filter option:contains("' + obj.category + '")');
       if($filterContents.length === 0) {
         $('#category-filter').append(obj.toHtml('#category_filter_template'));

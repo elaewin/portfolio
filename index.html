@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="stylesheet" href="styles/icons.css">
 
-    <script id="post_template" type="text/x-handlebars-template">
+    <script id="project_template" type="text/x-handlebars-template">
       <article data-author="{{author}}" data-category="{{category}}">
         <header class="post_header">
           <h2>{{title}}</h2>
@@ -45,9 +45,9 @@
         <nav class="main-nav">
           <div class="icon-menu"></div>
           <ul>
+            <li class="tab" data-content="projects"><a href="/">Projects</a></li>
             <li class="tab" data-content="blog"><a href="/blog">Blog</a></li>
             <!-- <li class="tab" data-content="https://ericawinberry.wordpress.com/portfolio/" target="_blank">My Books</li> -->
-            <li class="tab" data-content="posts"><a href="/">Projects</a></li>
             <li class="tab" data-content="about"><a href="/about">About</a></li>
           </ul>
         </nav>
@@ -56,7 +56,7 @@
     <div class="clearfix"></div>
     <main>
       <div id="text_container">
-        <section id="posts" class="tab-content">
+        <section id="projects" class="tab-content">
           <div>
             <ul id="filters">
               <li>

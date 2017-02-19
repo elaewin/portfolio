@@ -115,9 +115,19 @@
     padding-right: 0;
     color: rgba(245, 242, 225, 1);
   }
+
+  .main-nav li a:hover {
+    padding-right: 0;
+    color: #630300;
+  }
+
+  .main-nav li:hover, .main-nav li a:hover {
+    color: rgb(192, 57, 43);
+    background-color: rgba(192, 57, 43, 0)
+  }
 }
 
-/* Posts Section Styles */
+/* Projects Section Styles */
 
 #filters {
   margin: .2em auto;
@@ -184,6 +194,7 @@ a:link .grey, a:visited .grey {
 #about p {
   padding: .4em 1em .75em;
   font-size: 1em;
+  text-align: justify;
 }
 
 @media only screen and (min-width: 730px) {
