@@ -31,6 +31,10 @@
   color: #f5f2e1;
 }
 
+#page_footer a:hover {
+  color: rgb(192, 57, 43);
+}
+
 @media only screen and (min-width: 730px) {
   #text_container {
     padding-bottom: 3rem;

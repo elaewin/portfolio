@@ -115,6 +115,16 @@
     padding-right: 0;
     color: rgba(245, 242, 225, 1);
   }
+
+  .main-nav li a:hover {
+    padding-right: 0;
+    color: #630300;
+  }
+
+  .main-nav li:hover, .main-nav li a:hover {
+    color: rgb(192, 57, 43);
+    background-color: rgba(192, 57, 43, 0)
+  }
 }
 
 /* Projects Section Styles */
