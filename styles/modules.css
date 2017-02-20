@@ -36,7 +36,7 @@
 
 .main-nav li {
   background-color: rgba(245, 242, 225, 0.9);
-  color: #630300;
+  color: #8e0602;
   font-size: 1.5em;
   text-align: right;
   border-top: 1px solid #272c28;
@@ -48,7 +48,7 @@
 
 .main-nav li:hover, .main-nav li a:hover {
   color: rgb(245, 242, 225);
-  background-color: #630300;
+  background-color: #8e0602;
 }
 
 .media_icons {
@@ -118,7 +118,7 @@
 
   .main-nav li a:hover {
     padding-right: 0;
-    color: #630300;
+    color: rgb(192, 57, 43);
   }
 
   .main-nav li:hover, .main-nav li a:hover {
