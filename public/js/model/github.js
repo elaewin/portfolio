@@ -1,13 +1,12 @@
 'use strict';
 
 (function(module) {
-
-  var blogObj = {};
+  const blogObj = {};
 
   blogObj.githubData = [];
 
-  blogObj.requestData = function(callback) {
-    var filesUrl = '/github/repos/elaewin/learning_journal_201/contents';
+  blogObj.requestData = callback => {
+    const filesUrl = '/github/repos/elaewin/learning_journal_201/contents';
     $.ajax({
       url: filesUrl,
       success: function(fileData, message, xhr) {
@@ -23,16 +22,16 @@
     });
   };
 
-  blogObj.getBlogEntries = function(current) {
-    var regex = /lj_code201_day\d\d\.md/i;
+  blogObj.getBlogEntries = current => {
+    const regex = /lj_code201_day\d\d\.md/i;
     if(current.name.match(regex)) {
-      var newUrl = '/reposReq' + current.url.split('https://api.github.com')[1] + '&sort=name';
+      let newUrl = '/reposReq' + current.url.split('https://api.github.com')[1] + '&sort=name';
       $.ajax({
         url: newUrl,
         success: function(urlData, message, xhr) {
           // console.log(urlData);
-          var splitByDate = urlData.split('.md" id="file"')[0].split('201_day')[1];
-          var newBlogObj = {
+          let splitByDate = urlData.split('.md" id="file"')[0].split('201_day')[1];
+          let newBlogObj = {
             'classDay': splitByDate,
             'category': 'CF201',
             'blog_entry': urlData
@@ -45,7 +44,7 @@
     }
   };
 
-  blogObj.sortBlogEntries = function(blogEntries) {
+  blogObj.sortBlogEntries = blogEntries => {
     blogEntries.sort(function(a,b) {
       return (b.classDay) - (a.classDay);
     });

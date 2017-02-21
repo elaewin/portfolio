@@ -2,9 +2,9 @@
 
 (function(module) {
 
-  var postController = {};
+  const postController = {};
 
-  postController.reveal = function() {
+  postController.reveal = () => {
     $('.tab-content').hide();
     if($('.main-nav div').hasClass('icon-cross')) {
       $('.main-nav div').removeClass('icon-cross');

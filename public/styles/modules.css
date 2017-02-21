@@ -74,6 +74,13 @@
   list-style-position: inside;
 }
 
+.section-header {
+  text-align: center;
+  margin: .2em 0;
+  font-size: 2em;
+  border-bottom: 1px solid #272c28;
+}
+
 @media only screen and (min-width: 730px) {
 
   .header_h1 {
@@ -139,10 +146,11 @@
 }
 
 #category-filter {
-  font-family: "Rakkas", cursive;
+  font-family: "Hind Guntur", sans-serif;
   font-size: 1em;
   margin: .6em 0 .2em;
   letter-spacing: 0.075em;
+  background-color: #f5f2e1;
 }
 
 .post_header {
