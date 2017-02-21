@@ -10,7 +10,7 @@
   };
 
   blogView.renderBlogEntry = function() {
-    $('#blog').empty().append($('#blog .section-header')).append(
+    $('#blog div').empty().append(
       blogObj.githubData.map(blogCompiler)
     );
     blogView.cleanUpHtml();
