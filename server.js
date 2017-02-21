@@ -44,11 +44,9 @@ var proxy2 = function(request, response) {
 app.get('/github/*', proxyGitHub);
 app.get('/reposReq/*', proxy2);
 
-app.use(express.static('./'));
-
 app.get('*', function(request, response) {
   console.log('New request:', request.url);
-  response.sendFile('index.html', {root: '.'});
+  response.sendFile('index.html', {root: './public'});
 });
 
 app.listen(port, function() {
