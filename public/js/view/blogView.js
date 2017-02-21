@@ -1,11 +1,11 @@
 'use strict';
 
 (function(module) {
-  var blogView = {};
-  var blogOffset = 125;
+  const blogView = {};
+  const blogOffset = 125;
 
-  var blogCompiler = function(obj) {
-    var template = Handlebars.compile($('#blog-template').html());
+  let blogCompiler = function(obj) {
+    let template = Handlebars.compile($('#blog-template').html());
     return template(obj);
   };
 
@@ -30,7 +30,7 @@
 
   blogView.setTeasers = function() {
     $('.announce article').each(function() {
-      var $blogBody = $(this).find('.announce article');
+      let $blogBody = $(this).find('.announce article');
       if(($blogBody.children()).length < 3) {
         $(this).find('.read_on').hide();
       }
@@ -41,7 +41,7 @@
     $('a.read_more').on('click', function(event) {
       event.stopPropagation();
       event.preventDefault();
-      var $selection = $(event.target).prev();
+      let $selection = $(event.target).prev();
       if($selection.hasClass('show')) {
         $(event.target).html('Show more &#8594;');
         $('.announce article p').nextAll().slideUp('slow');
