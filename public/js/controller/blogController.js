@@ -1,10 +1,9 @@
 'use strict';
 
 (function(module){
+  const blogController = {};
 
-  var blogController = {};
-
-  blogController.reveal = function(){
+  blogController.reveal = () => {
     $('.tab-content').hide();
     if($('.main-nav div').hasClass('icon-cross')) {
       $('.main-nav div').removeClass('icon-cross');

@@ -1,11 +1,10 @@
 'use strict';
 
 (function(module) {
+  const mainController = {};
 
-  var mainController = {};
-
-  mainController.hamburgerMenu = function() {
-    var $hamburger = $('.main-nav div');
+  mainController.hamburgerMenu = () => {
+    const $hamburger = $('.main-nav div');
     $hamburger.on('click', function() {
       if($hamburger.hasClass('icon-menu')) {
         $hamburger.toggleClass('icon-cross');
@@ -14,9 +13,9 @@
     });
   };
 
-  mainController.contactLinkHandler = function() {
+  mainController.contactLinkHandler = () => {
     $('#email-placeholder').click( function() {
-      var username = 'erica.winberry', domain = 'gmail.com';
+      const username = 'erica.winberry', domain = 'gmail.com';
       window.location.href = 'mailto:' + username + '@' + domain;
     } );
   };

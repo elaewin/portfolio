@@ -1,10 +1,9 @@
 'use strict';
 
 (function(module){
+  const aboutController = {};
 
-  var aboutController = {};
-
-  aboutController.reveal = function(){
+  aboutController.reveal = () => {
     $('.tab-content').hide();
     if($('.main-nav div').hasClass('icon-cross')) {
       $('.main-nav div').removeClass('icon-cross');

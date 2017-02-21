@@ -2,13 +2,13 @@
 
 (function(module) {
 
-  var postView = {};
-  var postOffset = 125; // offset for scrolling to top of closed post/project.
+  const postView = {};
+  const postOffset = 125; // offset for scrolling to top of closed post/project.
 
   postView.renderIndexPage = function() {
     Post.allPosts.forEach(function(obj) {
       $('#projects').append(obj.toHtml('#project_template'));
-      var $filterContents = $('#category-filter option:contains("' + obj.category + '")');
+      let $filterContents = $('#category-filter option:contains("' + obj.category + '")');
       if($filterContents.length === 0) {
         $('#category-filter').append(obj.toHtml('#category_filter_template'));
       }
@@ -20,7 +20,7 @@
 
   postView.handleCategoryFilter = function() {
     $('#category-filter').on('change', function() {
-      var $cat = $(this).val();
+      let $cat = $(this).val();
       if($cat) {
         $('article').hide();
         $('article[data-category="' + $cat + '"]').fadeIn();
@@ -32,7 +32,7 @@
 
   postView.setTeasers = function() {
     $('article').each(function() {
-      var $postBody = $(this).find('.post_body');
+      let $postBody = $(this).find('.post_body');
       if(($postBody.children()).length < 2) {
         $(this).find('.read_on').hide();
       }
@@ -43,7 +43,7 @@
     $('article a.read_on').on('click', function(event) {
       event.stopPropagation();
       event.preventDefault();
-      var $selection = $(event.target).prev();
+      let $selection = $(event.target).prev();
       if($selection.hasClass('show')) {
         $(event.target).html('Show more &#8594;');
         $('.show *').not(':first-child').slideUp('slow');
@@ -60,7 +60,7 @@
   };
 
   postView.getWordCount = function () {
-    var wordCount = Post.allPosts.map(function(post) {
+    let wordCount = Post.allPosts.map(function(post) {
       return post.body.match(/\w+/g).length;
     }). reduce(function(totalCount, currentCount) {
       return totalCount + currentCount;

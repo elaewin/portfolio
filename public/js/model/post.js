@@ -3,13 +3,13 @@
 (function(module) {
 
   function Post(opts) {
-    for (var key in opts) this[key] = opts[key];
-  };
+    Object.keys(opts).forEach(ele => this[ele] = opts[ele]);
+  }
 
   Post.allPosts = [];
 
   Post.prototype.toHtml = function(scriptTemplateId) {
-    var template = Handlebars.compile($(scriptTemplateId).text());
+    let template = Handlebars.compile($(scriptTemplateId).text());
     this.daysAgo = parseInt((new Date() - new Date(this.pubDate))/60/60/24/1000);
     this.publishStatus = this.pubDate ? 'published ' + this.daysAgo + ' days ago' : '(draft)';
     this.body = marked(this.body);
@@ -31,7 +31,7 @@
         url: 'data/postData.json',
         method: 'HEAD',
         success: function(data,response,xhr) {
-          var eTag = xhr.getResponseHeader('ETag');
+          let eTag = xhr.getResponseHeader('ETag');
           if(!localStorage.eTag || eTag !== localStorage.eTag) {
             Post.getAllData(nextFunction);
           } else {
@@ -55,7 +55,7 @@
   };
 
   Post.countPerCategory = function(categoryToCount) {
-    var count = Post.allPosts.map(function(post) {
+    let count = Post.allPosts.map(function(post) {
       return post.category;
     })
     .reduce(function(categoryOfPost, currentCategory) {
