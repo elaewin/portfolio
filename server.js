@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
-var proxyGitHub = function(request, response) {
+let proxyGitHub = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (
     requestProxy({
@@ -28,7 +28,7 @@ var proxyGitHub = function(request, response) {
   )(request, response);
 };
 
-var proxy2 = function(request, response) {
+let proxy2 = function(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (
     requestProxy({
